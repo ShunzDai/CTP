@@ -1,0 +1,42 @@
+\documentclass[10pt]{article}
+\pdfoutput=1%xelatex编译注释掉
+\usepackage{../tex/NotesTeX}
+\usepackage[UTF8]{ctex}  %pdfTex中文环境
+\usepackage[utf8]{inputenc}  %调用\input函数
+\usepackage{graphicx}
+%\usepackage{showframe}
+%\usepackage{CTEX}  %xelatex编译中文环境
+
+\title{\begin{center}{\Huge \textit{家用理论物理教程}}\\{{\itshape 从入门到转行}}\end{center}}
+	\author{Shunz Dai\footnote{\href{https://ShunzDai.github.io/}{\textit{My Personal Blog}}}}
+	
+	
+	\affiliation{
+	Physics and Space Science College,China West Normal University
+	}
+	
+	\emailAdd{196883@outlook.com}
+	
+	
+	\begin{document}
+	
+		\maketitle
+		\flushbottom
+		\newpage
+		\pagestyle{fancynotes}
+		\input{chapters/Introduction.tex}
+		\input{chapters/Analytical_Mechanics.tex}
+		\input{chapters/GR.tex}
+		\input{chapters/QFT.tex}
+		\input{chapters/Appendix.tex}
+		
+	\end{document}
+
+
+	%\begin{equation}  公式居中编号
+	%	\begin{split}
+			
+	%	\end{split}
+	%\end{equation}
+
+	%\notag  某行公式不编号

@@ -1,0 +1,28 @@
+\begin{example}
+    （最速降线问题）求质点的轨迹方程，使得在同一平面上，质点由A点至B点用时最短.
+
+    设质点轨迹方程为隐函数$f(x(t),y(t))=0$，其中$x$表示质点在水平方向上的坐标，$y$表示质点在竖直方向上的坐标.
+    质点的运动轨迹满足如下作用量
+    $$S=\int^B_A ds,$$
+    其中
+    $$ds=\frac{1}{\alpha}\sqrt{(dx)^2+(dy)^2}=\frac{1}{\alpha}\sqrt{(dx)^2+\left(\frac{dy}{dx}\right)^2(dx)^2}=\frac{1}{\alpha}\sqrt{1+\left(\frac{dy}{dx}\right)^2}dx.$$
+    我们记$dy/dx\equiv y'$，于是对作用量变分为
+    \begin{eqnarray}\label{eq:Brachistochrone}
+        \delta S(y')&=&\frac{1}{\alpha}\int^B_A \delta\sqrt{1+y'^2}dx\notag\\
+        &=&\frac{1}{\alpha}\int^B_A \frac{d}{dy'}\sqrt{1+y'^2}\delta y'dx\notag\\
+        &=&\frac{1}{\alpha}\int^B_A \frac{y'}{\sqrt{1+y'^2}}\delta \left(\frac{dy}{dx}\right)dx\notag\\
+        &=&\frac{1}{\alpha}\int^B_A \left[\frac{d}{dx}\left(\frac{y'}{\sqrt{1+y'^2}}\delta y\right)-\frac{d}{dx}\left(\frac{y'}{\sqrt{1+y'^2}}\right)\delta y\right]dx\notag\\
+        &=&\frac{1}{\alpha}\int^B_A d\left(\frac{y'}{\sqrt{1+y'^2}}\delta y\right)-\frac{1}{\alpha}\int^B_A\frac{d}{dx}\left(\frac{y'}{\sqrt{1+y'^2}}\right)\delta ydx
+    \end{eqnarray}
+    注意到\ref{eq:Brachistochrone}第一项即
+    $$\frac{1}{\alpha}\int^B_A d\left(\frac{y'}{\sqrt{1+y'^2}}\delta y\right)=\frac{1}{\alpha}\left(\frac{y'}{\sqrt{1+y'^2}}\delta y\right)\Bigg|^B_A,$$
+    而积分上下限处$\delta y$均为0.于是我们就得到了轨迹满足的最小作用量为
+    \begin{eqnarray}\label{eq:Brachistochrone2}
+        0=\delta S(y')=-\frac{1}{\alpha}\int^B_A\frac{d}{dx}\left(\frac{y'}{\sqrt{1+y'^2}}\right)\delta ydx.
+    \end{eqnarray}
+    要使\ref{eq:Brachistochrone2}为零对任意变分$\delta y$均成立，唯有满足方程
+    \begin{eqnarray}\label{eq:elBrachistochrone}
+        \frac{d}{dx}\left(\frac{y'}{\sqrt{1+y'^2}}	\right)=0,
+    \end{eqnarray}
+    解得
+\end{example}
