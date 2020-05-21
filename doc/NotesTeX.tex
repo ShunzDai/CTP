@@ -3,10 +3,20 @@
 \usepackage{../tex/NotesTeX}
 \usepackage[UTF8]{ctex}  %pdfTex中文环境
 \usepackage[utf8]{inputenc}  %调用\input函数
-\usepackage{graphicx}
-%\usepackage{showframe}
+\usepackage{graphicx}  %图表环境
+
+
+
+%\usepackage{background}%封面背景
+\usepackage{draftwatermark}  %水印，参数设置：仅在首页出现 [firstpage] ；仅在尾页出现 [lastpage]
+\SetWatermarkText{DRAFT}  %水印自定义文字
+%\SetWatermarkLightness{0.5}  %水印透明度，默认0.8，范围0-1
+%\SetWatermarkScale{1}  %水印大小，默认1.2
 %\usepackage{CTEX}  %xelatex编译中文环境
 
+
+
+%\usepackage{showframe}
 \title{\begin{center}{\Huge \textit{家用理论物理教程}}\\{{\itshape 从入门到转行}}\end{center}}
 	\author{Shunz Dai\footnote{\href{https://ShunzDai.github.io/}{\textit{My Personal Blog}}}}
 	
@@ -16,19 +26,22 @@
 	}
 	
 	\emailAdd{196883@outlook.com}
+	%\backgroundsetup{scale=1, angle=0, opacity = 0.1,contents = {\includegraphics[width=\paperwidth, height=\paperwidth,keepaspectratio]{figures/background.png}}}
 	
 	
 	\begin{document}
 	
 		\maketitle
+		
 		\flushbottom
 		\newpage
 		\pagestyle{fancynotes}
-		\input{chapters/Introduction.tex}
-		\input{chapters/Analytical_Mechanics.tex}
-		\input{chapters/GR.tex}
-		\input{chapters/QFT.tex}
-		\input{chapters/Appendix.tex}
+		\input{sections/Introduction.tex}
+		\input{sections/Differential_Geometry.tex}
+		\input{sections/Analytical_Mechanics.tex}
+		\input{sections/GR.tex}
+		\input{sections/QFT.tex}
+		\input{sections/Appendix.tex}
 		
 	\end{document}
 

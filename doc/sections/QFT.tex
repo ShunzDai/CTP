@@ -49,11 +49,11 @@
 				考虑到$\hat{A}$的Hermitian性，于是有
 				$$a^*_n\langle\psi_n\vert\psi_n\rangle=\langle\psi_n\vert\hat{A}^\dagger\vert\psi_n\rangle=\langle\psi_n\vert\hat{A}\vert\psi_n\rangle=a_n\langle\psi_n\vert\psi_n\rangle,$$
 				即$a^*_n=a_n$.要使等式成立，则$a_n$必为实数.这样约定是因为量子系统中出现的测量值为复数时没有意义.
-				\item 由(\ref{eq:xp})，(\ref{eq:xxpp})得
+				\item 由(\ref{eq:xxppxp})得
 				\begin{eqnarray*}
-					\{x^\mu,p_\nu\}=\delta^\mu_\nu&\Rightarrow&\frac{1}{i\hbar}[\hat{x}^\mu,\hat{p}_\nu]=\delta^\mu_\nu;\\
-					\{x^\mu,x^\nu\}=0&\Rightarrow&\frac{1}{i\hbar}[\hat{x}^\mu,\hat{x}^\nu]=0;\\
-					\{p_\mu,p_\nu\}=0&\Rightarrow&\frac{1}{i\hbar}[\hat{p}_\mu,\hat{p}_\nu]=0.
+					\{x^\mu,x^\nu\}&=&0\Rightarrow\frac{1}{i\hbar}[\hat{x}^\mu,\hat{x}^\nu]=0;\\
+					\{p_\mu,p_\nu\}&=&0\Rightarrow\frac{1}{i\hbar}[\hat{p}_\mu,\hat{p}_\nu]=0;\\
+					\{x^\mu,p_\nu\}&=&\delta^\mu_\nu\Rightarrow\frac{1}{i\hbar}[\hat{x}^\mu,\hat{p}_\nu]=\delta^\mu_\nu.
 				\end{eqnarray*}
 				\item 若系统的状态矢量$\vert\psi\rangle$是归一化的，则$\langle\psi\vert\psi\rangle=1$，此时$\langle A\rangle =\langle\psi\vert\hat{A}\vert\psi\rangle$.
 				\item 豆腐脑不可以是咸的.
@@ -61,7 +61,7 @@
 		\end{remark}
 
 		接下来我们便可以开始正题了.
-		\subsection{Heisenberg绘景与Schrodinger绘景}
+		\subsection{绘景}
 			首先，我们给出一个描述力学量算符随时间演化的方程，称为Heisenberg方程.
 			\begin{definition}Heisenberg方程是对(\ref{eq:heq1})量子化的结果
 				\begin{equation}\label{eq:heq2}
