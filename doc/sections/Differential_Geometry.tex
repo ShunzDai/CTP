@@ -1,17 +1,38 @@
 \part{微分几何}\label{Part:Differential_Geometry}
 	\begin{margintable}\vspace{1.4in}\footnotesize
 		\begin{tabularx}{\marginparwidth}{|X}
-			Section~\ref{sec:manifold}. 微分流形\\
-			Section~\ref{sec:structure}. 张量场与微分形式场\\
-			Section~\ref{sec:LieAlgebra}. 联络与曲率\\
+			
+			%Section~\ref{sec:structure}. 张量场与微分形式场\\
+			Section~\ref{sec:Riemannian_Manifold}. Riemannian流形\\
+			
+			%Section~\ref{sec:LieAlgebra}. 联络与曲率\\
 		\end{tabularx}
 	\end{margintable}	
-
-
-	\section{微分流形}\label{sec:manifold}
-	
+	我并不打算像通常的微分几何教材那样循规蹈矩，当然这会损失一些数学上的严谨性，但我认为这无伤大雅.
+	\section{切空间与余切空间}
+		我们首先回顾一下线性空间的公理化定义.
+		\begin{definition}
+			域$F$上的线性空间$V$是这样一个集合，对$\forall \alpha,\beta,\gamma\in V;a,b\in F$满足
+			\begin{enumerate}
+				矢量加法映射$V\times V\rightarrow V$：
+				\item $\alpha+\beta=\beta+\alpha$；
+				\item $(\alpha+\beta)+\gamma=\alpha+(\beta+\gamma)$；
+				\item 存在唯一的$0\in V$，使得$0+\alpha=\alpha$；
+				\item 对任意$\alpha\in V$，存在唯一的$\beta\in V$，使得$\alpha+\beta=0$；
+				
+				矢量数乘映射$F\times V\rightarrow V$：
+				\item 对$1\in F$，有$1\alpha=\alpha$；
+				\item $a(b\alpha)=(ab)\alpha$；
+				\item $(a+b)\alpha=a\alpha+b\alpha$；
+				\item $a(\alpha+\beta)=a\alpha+a\beta$
+			\end{enumerate}
+		\end{definition}
 	
 	\section{张量场与微分形式场}
+
+
+	\section{Riemannian流形}\label{sec:Riemannian_Manifold}
+		一个流形指的是这样一个结构，其在局部上是平直的，但整体不必是平直的，为了描述这一属性，我们引入度规张量.
 
 
 	\section{联络与曲率}
