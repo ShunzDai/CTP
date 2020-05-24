@@ -3,20 +3,22 @@
 		\begin{margintable}\vspace{1.4in}\footnotesize
 			\begin{tabularx}{\marginparwidth}{|X}
 			Section~\ref{sec:Dimensional}. 常见物理量的单位换算关系\\
+			Section~\ref{sec:N-sphere}. $n$维球的体积与表面积\\
+			%Section~\ref{sec:N-sphere}. $n$维球的体积与表面积\\
 			\end{tabularx}
 		\end{margintable}
 
 		\section{常见物理量的单位换算关系}\label{sec:Dimensional}
-
+			表\ref{tab:Dimensional}给出了一些常见物理量或物理常数的单位制换算关系.表格中的自然单位制是$c=\hbar=\varepsilon_0=k=1$的自然单位制，其中$c$是真空光速，$\hbar$是约化Planck常数，$\varepsilon_0$是真空介电常数，$k$是Boltzmann常数.
 		
-		\begin{table}[!htbp]
+			\begin{table}[!htbp]
 			\centering
-			\caption{常见物理量的单位换算关系}\label{tab:Dimensional}%添加标题 设置标签
+			
 			\begin{tabular*}{\hsize}{@{}@{\extracolsep{\fill}}rrr@{}}
 				\toprule
-				常数							&				国际单位制					&	自然单位制（$c=\hbar=\varepsilon_0=k=1$）	\\
+				常数							&				国际单位制					&	自然单位制	\\
 				\midrule
-				光速$c$							&	$2.99792458E+08\ m^{1}s^{-1}$			&	$1$							\\
+				真空光速$c$							&	$2.99792458E+08\ m^{1}s^{-1}$			&	$1$							\\
 				Planck常数$h$					&	$6.626E-34\ kg^{1}m^{2}s^{-1}$			&	$1$							\\
 				引力常数$G$						&	$6.67259E-11\ kg^{-1}m^{2}s^{-1}$		&	$m^{2}$						\\
 				Coulomb常数$k_e$				&	$8.988E+09\ A^{-2}kg^{1}m^{3}s^{-4}$	&	$1$							\\
@@ -25,21 +27,21 @@
 				真空磁导率$\mu_0$				&	$4\pi E-7\ A^{-2}kg^{1}m^{1}s^{-2}$		&	$1$							\\
 				Boltzmann常数$k$				&	$1.38 E-23\ K^{-1}kg^{1}m^{2}s^{-2}$	&	$1$							\\
 				\midrule
-				力学量							&				国际单位制					&	自然单位制（$c=\hbar=\varepsilon_0=k=1$）	\\
+				力学量							&				国际单位制					&	自然单位制	\\
 				\midrule
 				长度$L$							&	$m^{1}$									&	 $m^{1}$					\\
 				时间$T$							&	$s^{1}$									&	 $m^{1}$					\\
 				质量$M$							&	$kg^{1}$								&	 $m^{-1}$					\\
+				动量$P$							&	$kg^{1}m^{1}s^{-1}$						&	 $m^{-1}$					\\
 				能量$H$							&	$kg^{1}m^{2}s^{-2}$						&	$m^{-1}$					\\
 				能量密度						&	$kg^{1}m^{-1}s^{-2}$					&	$m^{-4}$					\\
 				能量流密度$S$					&	$kg^{1}s^{-3}$							&	$m^{-4}$					\\
 				能动量张量分量$T_{\mu\nu}$		&	$m^{-2}$								&	$m^{-2}$					\\
 				Einstein张量分量$G_{\mu\nu}$	&	$m^{-2}$								&	$m^{-2}$					\\
 				\midrule
-				电磁学量						&				国际单位制					&	自然单位制（$c=\hbar=\varepsilon_0=k=1$）	\\
+				电磁学量						&				国际单位制					&	自然单位制	\\
 				\midrule
 				电流$I$							&	$A^{1}$									&	 $m^{-1}$					\\
-				库仑$C$							&	$A^{1}s^{1}$							&	 $1$						\\
 				电场强度$E$						&	$A^{-1}kg^{1}m^{1}s^{-3}$				&	 $m^{-2}$					\\
 				%电位移矢量$D$					&	$m^{1}$									&	 $m^{1}$					\\
 				%磁场强度$H$					&	$m^{1}$									&	 $m^{1}$					\\
@@ -47,9 +49,9 @@
 				规范场分量$A$					&	$A^{-1}kg^{1}m^{1}s^{-2}$				&	 $m^{-1}$					\\
 				场强张量分量$F_{\mu\nu}$		&	$A^{-1}kg^{1}s^{-2}$					&	 $m^{-2}$					\\
 				\midrule
-				热学量							&				国际单位制					&	自然单位制（$c=\hbar=\varepsilon_0=k=1$）	\\
+				热学量							&				国际单位制					&	自然单位制	\\
 				\midrule
-				开尔文$\varTheta$				&	$K^{1}$									&	 $m^{-1}$					\\
+				温度$\varTheta$					&	$K^{1}$									&	 $m^{-1}$					\\
 				$\cdots$						&	$\cdots$								&	 $\cdots$					\\
 
 
@@ -58,6 +60,55 @@
 					
 				\bottomrule
 			\end{tabular*}
-			
+			\caption{常见物理量的单位换算关系}\label{tab:Dimensional}
 			\end{table}
-        
+			
+			\newpage
+
+
+		\section{$n$维球的体积与表面积}\label{sec:N-sphere}
+
+			这一节我们研究$n$维球的体积与表面积问题，它有一个优雅的解决方案，即使用Gauss 积分.首先我们明确这样一个性质，即一个嵌入$\mathbb{R}^n$中的、半径为$r$的$n$维球$S^{n-1}$，其体积$V_n(r)$一定正比于$r^n$，比例系数是单位球的体积$V_n(1)$：
+			\begin{eqnarray}\label{eq:V_n(r)}
+				V_n(r)=V_n(1)r^n. 
+			\end{eqnarray}
+			我们对(\ref{eq:V_n(r)})微分可以得到表面积满足
+			\begin{eqnarray}\label{eq:S_n(r)}
+				dV_n(r)=nV_n(1)r^{n-1}dr=S_n(r)dr, 
+			\end{eqnarray}
+			其中$S_n(r)\equiv =nV_n(1)r^{n-1}$.我们在超极坐标下构造这样一个Gauss型积分
+			\begin{eqnarray}\label{eq:Gauss int}
+				\int_{\mathbb{R}^n}e^{-r^2}dV_n,
+			\end{eqnarray}
+			现在我们尝试求出(\ref{eq:Gauss int}).若取坐标系为超球坐标系，则有
+			\begin{eqnarray}\label{eq:Gauss int1}
+				\int_{\mathbb{R}^n}e^{-r^2}dV_n=nV_n(1)\int_0^{+\infty}r^{n-1}e^{-r^2}dr,
+			\end{eqnarray}
+			作一个变量替换$u=r^2$，代入得
+			\begin{eqnarray*}
+				\int_0^{+\infty}r^{n-1}e^{-r^2}dr&=&\frac{1}{2}\int_0^{+\infty}u^{\frac{n}{2}-1}e^{-u}du=\frac{1}{2}\varGamma\left(\frac{n}{2}\right),
+			\end{eqnarray*}
+			于是
+			\begin{eqnarray}\label{eq:Gauss int2}
+				\int_{\mathbb{R}^n}e^{-r^2}dV_n(r)=V_n(1)\frac{n}{2}\varGamma\left(\frac{n}{2}\right)=V_n(1)\varGamma\left(\frac{n}{2}+1\right);
+			\end{eqnarray}
+			若取坐标系为直角坐标系，则有
+			\begin{eqnarray}\label{eq:Gauss int3}
+				\int_{\mathbb{R}^n}e^{-r^2}dV_n=\int_{\mathbb{R}^n}e^{-\left[(x^1)^2+\cdots+(x^n)^2\right]}dx^1\cdots dx^n=\left(\int_{-\infty}^{+\infty}e^{-x^2}dx\right)^n,
+			\end{eqnarray}
+			作一个变量替换$u=x^2$，代入得
+			\begin{eqnarray*}
+				\int_{-\infty}^{+\infty}e^{-x^2}dx=\int_{0}^{+\infty}u^{-\frac{1}{2}}e^{-u}dx=\varGamma\left(\frac{1}{2}\right)=\pi^{\frac{1}{2}},
+			\end{eqnarray*}
+			于是
+			\begin{eqnarray}\label{eq:Gauss int4}
+				\int_{\mathbb{R}^n}e^{-r^2}dV_n=\pi^{\frac{n}{2}}.
+			\end{eqnarray}
+			结合(\ref{eq:V_n(r)})，(\ref{eq:S_n(r)})，(\ref{eq:Gauss int2})以及(\ref{eq:Gauss int4})我们得到
+			\begin{eqnarray}
+				V_n(r)&=&\frac{\pi^{\frac{n}{2}}}{\varGamma\left(\frac{n}{2}+1\right)}r^n;\\
+				S_n(r)&=&\frac{2\pi^{\frac{n}{2}}}{\varGamma\left(\frac{n}{2}\right)}r^{n-1}.
+			\end{eqnarray}
+
+
+			
