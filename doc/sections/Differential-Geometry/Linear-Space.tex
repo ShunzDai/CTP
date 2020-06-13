@@ -1,0 +1,80 @@
+\section{由欧式坐标诱导的线性空间}
+    欧式坐标诱导出两种特殊的线性空间，分别称为切空间和余切空间.我们可以定义线性空间与线性空间的“张量积”，从而构造出更大的线性空间，称为张量空间.另外，全反对称张量作为张量空间的特例具有特别的代数结构，称为外代数.本节将会一一讲述这些由欧式坐标诱导的线性空间.
+    \subsection{切空间}
+        \begin{definition}
+            $\mathbb{R}^n$中的点$p$在坐标系$(x)$下的坐标为$(x^1,\cdots,x^n)$，则$(x^1,\cdots,x^n)$在$p$点诱导了一个线性空间$T_p\mathbb{R}^n$，$T_p\mathbb{R}^n$的元素即导数算符.
+        \end{definition}
+        我们将$T_p\mathbb{R}^n$称为切空间,$T_p\mathbb{R}^n$的元素称为切矢量.这个定义是说，任意一个切向量$X\in T_p\mathbb{R}^n$都能通过导数算符在$p$点展开为
+        \begin{equation}\label{eq:tangent 1}
+            X=\left(X^\mu\frac{\partial}{\partial x^\mu}\right)\Bigg|_p,
+        \end{equation}
+        其中$x^\mu$表示切向量$X$在基底$\partial/\partial x^\mu$下的分量.我们也可以用矩阵显式写出(\ref{eq:tangent 1})，即
+        \begin{equation}\label{eq:tangent 2}
+            X=
+            \begin{pmatrix}
+                X^1&\cdots&X^n	
+            \end{pmatrix}
+            \begin{pmatrix}
+                \frac{\partial}{\partial x^1}\\
+                \vdots\\
+                \frac{\partial}{\partial x^n}	
+            \end{pmatrix}.
+        \end{equation}
+        在进行坐标变换时，切空间的基底像下面这样改变：
+        \begin{equation}\label{eq:tangent 3}
+            \frac{\partial}{\partial x^\mu}=\frac{\partial x'^\nu}{\partial x^\mu}\frac{\partial}{\partial x'^\nu},
+        \end{equation}
+        写成矩阵显式就是
+        \begin{equation}\label{eq:tangent 4}
+            \begin{pmatrix}
+                \frac{\partial}{\partial x^1}\\
+                \vdots\\
+                \frac{\partial}{\partial x^n}	
+            \end{pmatrix}
+            =
+            \begin{pmatrix}
+                \frac{\partial x'^1}{\partial x^1}&\cdots&\frac{\partial x'^n}{\partial x^1}\\
+                \vdots&\ddots&\vdots\\
+                \frac{\partial x'^1}{\partial x^n}&\cdots&\frac{\partial x'^n}{\partial x^n}\\	
+            \end{pmatrix}
+            \begin{pmatrix}
+                \frac{\partial}{\partial x'^1}\\
+                \vdots\\
+                \frac{\partial}{\partial x'^n}	
+            \end{pmatrix}.
+        \end{equation}
+        我们将(\ref{eq:tangent 4})中产生的$n$阶方阵称为Jocobi矩阵，记为$J$.
+        \begin{example}
+            计算球坐标系下的切空间基底
+            $\left(\frac{\partial}{\partial r}\ \frac{\partial}{\partial \theta}\ \frac{\partial}{\partial \varphi}\right)$
+            转换到直角坐标系下的基底的变换关系.
+            \begin{eqnarray*}
+                \frac{\partial}{\partial r}&=&\frac{\partial x}{\partial r}\frac{\partial }{\partial x}+\frac{\partial y}{\partial r}\frac{\partial }{\partial y}+\frac{\partial z}{\partial r}\frac{\partial }{\partial z}=\sin\theta \cos\varphi\frac{\partial }{\partial x}+\sin\theta \sin\varphi\frac{\partial }{\partial y}+\cos\theta\frac{\partial }{\partial z};\\
+                \frac{\partial}{\partial \theta}&=&\frac{\partial x}{\partial \theta}\frac{\partial }{\partial x}+\frac{\partial y}{\partial \theta}\frac{\partial }{\partial y}+\frac{\partial z}{\partial \theta}\frac{\partial }{\partial z}=r\cos\theta \cos\varphi\frac{\partial }{\partial x}+r\cos\theta \sin\varphi\frac{\partial }{\partial y}-r\sin\theta\frac{\partial }{\partial z};\\
+                \frac{\partial}{\partial \varphi}&=&\frac{\partial x}{\partial \varphi}\frac{\partial }{\partial x}+\frac{\partial y}{\partial \varphi}\frac{\partial }{\partial y}+\frac{\partial z}{\partial \varphi}\frac{\partial }{\partial z}=-r\sin\theta \sin\varphi\frac{\partial }{\partial x}+r\sin\theta \cos\varphi\frac{\partial }{\partial y}.
+            \end{eqnarray*}
+            写成矩阵形式就是
+            \begin{equation}
+                \begin{pmatrix}
+                    \frac{\partial}{\partial r}\\
+                    \frac{\partial}{\partial \theta}\\
+                    \frac{\partial}{\partial \varphi}	
+                \end{pmatrix}
+                =
+                \begin{pmatrix}
+                    \sin\theta \cos\varphi&\sin\theta \sin\varphi&\cos\theta\\
+                    r\cos\theta \cos\varphi&r\cos\theta \sin\varphi&-r\sin\theta\\
+                    -r\sin\theta \sin\varphi&r\sin\theta \cos\varphi&0\\	
+                \end{pmatrix}
+                \begin{pmatrix}
+                    \frac{\partial}{\partial x}\\
+                    \frac{\partial}{\partial y}\\
+                    \frac{\partial}{\partial z}	
+                \end{pmatrix}.
+            \end{equation}
+        \end{example}
+        \begin{exercise}
+            计算柱坐标系下的切空间基底
+            $\left(\frac{\partial}{\partial r}\ \frac{\partial}{\partial \theta}\ \frac{\partial}{\partial z}\right)$
+            转换到直角坐标系下的基底的变换关系.
+        \end{exercise}
