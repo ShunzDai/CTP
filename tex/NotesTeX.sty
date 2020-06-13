@@ -66,9 +66,9 @@
 % ----------------------------------------------------------------------
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}
 
-\geometry{paperheight=845pt,paperwidth=597pt,                         %fix paperwidth and height.
+\geometry{paperheight=845pt,paperwidth=597pt,                   %fix paperwidth and height.
           marginparsep=.02\paperwidth,marginparwidth=.23\paperwidth,
-          hoffset=-1in, voffset=-1in, headheight=.02\paperheight,
+          inner=.05\paperwidth,voffset=-1in,headheight=.02\paperheight,
           headsep=.03\paperheight,footskip=20pt,
           textheight=.84\paperheight,textwidth=.64\paperwidth}
 
@@ -149,7 +149,7 @@
 
 \tcolorboxenvironment{definition}{
   boxrule=0pt,
-  boxsep=0pt,
+  boxsep=2pt,
   colback={White!90!Cerulean},
   enhanced jigsaw, 
   borderline west={2pt}{0pt}{Cerulean},
@@ -161,7 +161,7 @@
 
 \tcolorboxenvironment{theorem}{
   boxrule=0pt,
-  boxsep=0pt,
+  boxsep=2pt,
   colback={White!90!Dandelion},
   enhanced jigsaw, 
   borderline west={2pt}{0pt}{Dandelion},
@@ -173,7 +173,7 @@
 
 \tcolorboxenvironment{lemma}{
   boxrule=0pt,
-  boxsep=0pt,
+  boxsep=2pt,
   blanker,
   borderline west={2pt}{0pt}{Red},
   before skip=10pt,
@@ -186,7 +186,7 @@
 
 \tcolorboxenvironment{proof}{
   boxrule=0pt,
-  boxsep=0pt,
+  boxsep=2pt,
   blanker,
   borderline west={2pt}{0pt}{NavyBlue!80!white},
   before skip=10pt,
@@ -198,7 +198,7 @@
 
 \tcolorboxenvironment{remark}{
   boxrule=0pt,
-  boxsep=0pt,
+  boxsep=2pt,
   blanker,
   borderline west={2pt}{0pt}{Green},
   before skip=10pt,
@@ -210,7 +210,7 @@
 
 \tcolorboxenvironment{example}{
   boxrule=0pt,
-  boxsep=0pt,
+  boxsep=2pt,
   blanker,
   borderline west={2pt}{0pt}{Black},
   sharp corners,
@@ -418,7 +418,6 @@
 \newcommand{\mfX}{{\mathfrak{X}}}
 \newcommand{\mfY}{{\mathfrak{Y}}}
 \newcommand{\mfZ}{{\mathfrak{Z}}}
-
 
 %===========================================================================================================
 
@@ -691,18 +690,22 @@
 %headings style
 
 
+\newcommand\psection{\@startsection{section}{1}{\z@}%
+                                   {-3.5ex \@plus -1.3ex \@minus -.7ex}%
+                                   {2.3ex \@plus .4ex \@minus .4ex}%
+                                   {\ }}
 
 \renewcommand\section{\@startsection{section}{1}{\z@}%
                                    {-3.5ex \@plus -1.3ex \@minus -.7ex}%
-                                   {2.3ex \@plus.4ex \@minus .4ex}%
+                                   {2.3ex \@plus .4ex \@minus .4ex}%
                                    {\sffamily\Large\bfseries}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
-                                   {-2.3ex\@plus -1ex \@minus -.5ex}%
+                                   {-2.3ex \@plus -1ex \@minus -.5ex}%
                                    {1.2ex \@plus .3ex \@minus .3ex}%
                                    {\sffamily\large\bfseries}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
-                                   {-2.3ex\@plus -1ex \@minus -.5ex}%
-                                   {1ex \@plus .2ex \@minus .2ex}%
+                                   {-2.3ex \@plus -1ex \@minus -.5ex}%
+                                   {1.0ex \@plus .2ex \@minus .2ex}%
                                    {\sffamily\normalsize\bfseries}}
 \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
                                    {1.75ex \@plus1ex \@minus.2ex}%

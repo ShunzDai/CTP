@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2020.2.22)  13 JUN 2020 23:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2020.2.22)  13 JUN 2020 23:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1934,7 +1934,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \email@toks=\toks51
 \c@email@counter=\count324
 \affiliationsSep=\skip79
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 550.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 549.
  (c:/texlive/2018/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )) (c:/texlive/2018/texmf-dist/tex/latex/ctex/ctex.sty
@@ -2482,14 +2482,14 @@ Package caption Info: End \AtBeginDocument code.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(101.92578pt, 393.14842pt, 101.9258pt)
+* h-part:(L,W,R)=(30.71661pt, 393.14842pt, 173.13496pt)
 * v-part:(T,H,B)=(70.89124pt, 667.77187pt, 106.3369pt)
 * \paperwidth=597.0pt
 * \paperheight=845.0pt
 * \textwidth=393.14842pt
 * \textheight=677.77187pt
-* \oddsidemargin=29.65579pt
-* \evensidemargin=29.65579pt
+* \oddsidemargin=-41.55338pt
+* \evensidemargin=-41.55338pt
 * \topmargin=42.25258pt
 * \headheight=16.90361pt
 * \headsep=25.34897pt
@@ -2499,7 +2499,7 @@ Package caption Info: End \AtBeginDocument code.
 * \marginparsep=11.94255pt
 * \columnsep=10.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
-* \hoffset=-72.26999pt
+* \hoffset=0.0pt
 * \voffset=-72.26999pt
 * \mag=1000
 * \@twocolumnfalse
@@ -2653,7 +2653,7 @@ File: zhwindowsfonts.tex 2018/01/28 v2.4.12 Windows font map loader for pdfTeX a
 Package marginnote Info: Margin note 4.1 is on absolute page 4
 (marginnote)              on input line 1.
 Package marginnote Info: right page because not two side mode on input line 1.
-Package marginnote Info: xpos seems to be 101.92578pt,
+Package marginnote Info: xpos seems to be 30.71661pt,
 (marginnote)             \marginnoterightadjust ignored on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <24.88> on input line 1.
@@ -2668,7 +2668,7 @@ Package CJKpunct Info: use punctuation spaces for family 'rm' with punctstyle (q
 Package marginnote Info: Margin note 5.1 is on absolute page 5
 (marginnote)              on input line 1.
 Package marginnote Info: right page because not two side mode on input line 1.
-Package marginnote Info: xpos seems to be 101.92578pt,
+Package marginnote Info: xpos seems to be 30.71661pt,
 (marginnote)             \marginnoterightadjust ignored on input line 1.
 
 
@@ -2711,7 +2711,12 @@ Overfull \hbox (3.73387pt too wide) in paragraph at lines 125--1
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4] [5]) (./sections/Differential-Geometry/Field.tex) (./sections/Differential-Geometry/Manifold.tex) (./sections/Differential-Geometry/Connection.tex
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+[][]\T1/lmss/bx/n/10 Definition 2.1. []$\U/msb/m/n/10 R[]$\C70/rm/m/n/10/4e - \C70/rm/m/n/10/76 „ \C70/rm/m/n/10/70 ¹$\OML/lmm/m/it/10 p$\C70/rm/m/sc/10/57 ( P \C70/rm/m/sc/10/68 ^^G \C70/rm/m/sc/10/7c û$\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x\OT1/lmr/m/n/10 )$\C70/rm/m/n/10/4e  \C70/rm/m/n/10/76 „ \C70/rm/m/sc/10/57 P \C70/rm/m/sc/10/68 ^^G \C70/rm/m/n/10/4e :$\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x[]; []  ; x[]\OT1/lmr/m/n/10 )$|\C70/rm/m/n/10/ff ^^L|
+ []
+
+[5]) (./sections/Differential-Geometry/Field.tex) (./sections/Differential-Geometry/Manifold.tex) (./sections/Differential-Geometry/Connection.tex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
@@ -2756,7 +2761,7 @@ Package amsmath Warning: Cannot use `split' here;
 Package marginnote Info: Margin note 13.1 is on absolute page 13
 (marginnote)              on input line 1.
 Package marginnote Info: right page because not two side mode on input line 1.
-Package marginnote Info: xpos seems to be 101.92578pt,
+Package marginnote Info: xpos seems to be 30.71661pt,
 (marginnote)             \marginnoterightadjust ignored on input line 1.
 ) (./sections/Analytical-Mechanics/Lagrange.tex
 Overfull \hbox (3.31973pt too wide) in paragraph at lines 9--15
@@ -2787,14 +2792,23 @@ Overfull \hbox (1.28073pt too wide) in paragraph at lines 2--3
 \C70/rm/m/n/10/65 p|\C70/rm/m/n/10/ff ^^L| \C70/rm/m/n/10/62 ^^Q \C70/rm/m/n/10/4e ì \C70/rm/m/n/10/5c ^^F \C70/rm/m/n/10/51 v \C70/rm/m/n/10/88 h \C70/rm/m/n/10/79 : \C70/rm/m/n/10/4e :$\OML/lmm/m/it/10 H\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 x[]\OT1/lmr/m/n/10 ; \OML/lmm/m/it/10 p[]\OT1/lmr/m/n/10 )$\T1/lmr/m/n/10 .\C70/rm/m/sc/10/75 1\T1/lmr/m/n/10 Hamilton\C70/rm/m/n/10/51 ý \C70/rm/m/n/10/65 p \C70/rm/m/n/10/90 ^^P \C70/rm/m/sc/10/6b e \C70/rm/m/n/10/64 - \C70/rm/m/n/10/5e ú \C70/rm/m/sc/10/76 „ \C70/rm/m/sc/10/52 › \C70/rm/m/sc/10/5b f \C70/rm/m/n/10/4f S \C70/rm/m/sc/10/7c û \C70/rm/m/sc/10/80 ý \C70/rm/m/n/10/63 Ð \C70/rm/m/n/10/4f › \C70/rm/m/n/10/4e 0 \C70/rm/m/sc/10/5b Ì \C70/rm/m/sc/10/76 „ \C70/rm/m/n/10/4f á \C70/rm/m/sc/10/60 o|\C70/rm/m/n/10/ff ^^L| \C70/rm/m/n/10/4e ‹
  []
 
-[12] [13]
+[12]
+Underfull \vbox (badness 1072) has occurred while \output is active []
+
+ [13]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14] [15] [16]) [17] (./sections/GR.tex
-Package marginnote Info: Margin note 21.1 is on absolute page 21
+ [14]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16] [17]) [18] (./sections/GR.tex
+Package marginnote Info: Margin note 22.1 is on absolute page 22
 (marginnote)              on input line 1.
 Package marginnote Info: right page because not two side mode on input line 1.
-Package marginnote Info: xpos seems to be 101.92578pt,
+Package marginnote Info: xpos seems to be 30.71661pt,
 (marginnote)             \marginnoterightadjust ignored on input line 1.
 ) (./sections/GR/Field-Equation.tex
 Underfull \hbox (badness 1953) in paragraph at lines 27--33
@@ -2820,13 +2834,13 @@ Underfull \hbox (badness 1331) in paragraph at lines 71--73
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18] [19]) (./sections/GR/Exact-Solutions.tex
+ [19] [20]) (./sections/GR/Exact-Solutions.tex
 Underfull \vbox (badness 4279) has occurred while \output is active []
 
- [20]
+ [21]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21]
+ [22]
 Underfull \hbox (badness 10000) in paragraph at lines 96--98
 
  []
@@ -2834,7 +2848,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--98
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [22]
+ [23]
 Overfull \hbox (12.17871pt too wide) in paragraph at lines 135--137
 \C70/rm/m/n/10/56 à \C70/rm/m/sc/10/6b d \C70/rm/m/n/10/53 ï \C70/rm/m/sc/10/5f — \C70/rm/m/n/10/79 ï \C70/rm/m/sc/10/52 ^^F \C70/rm/m/n/10/5e 8 \C70/rm/m/sc/10/65 p$\OML/lmm/m/it/10 k[] \OT1/lmr/m/n/10 = 1$\T1/lmr/m/n/10 .\C70/rm/m/n/10/53 æ \C70/rm/m/n/10/4e ^^@ * \C70/rm/m/n/10/79 ï \C70/rm/m/sc/10/52 ^^F \C70/rm/m/n/10/5e 8 \C70/rm/m/sc/10/65 p$\OML/lmm/m/it/10 k[]$\C70/rm/m/n/10/53 ï \C70/rm/m/sc/10/75 1 \C70/rm/m/n/10/6d K \C70/rm/m/sc/10/57 0 \C70/rm/m/sc/10/7e ¿ \C70/rm/m/sc/10/65 ¹ \C70/rm/m/sc/10/7a  \C70/rm/m/sc/10/76 „ \C70/rm/m/sc/10/5f 1 \C70/rm/m/sc/10/57 : \C70/rm/m/n/10/8f Ñ \C70/rm/m/n/10/4f < \C70/rm/m/n/10/6c B \C70/rm/m/sc/10/5f —|\C70/rm/m/n/10/ff ^^L| \C70/rm/m/n/10/51 v \C70/rm/m/n/10/50 < \C70/rm/m/n/10/4e :$\OMS/lmsy/m/n/10 ^^@\OT1/lmr/m/n/10 2\OML/lmm/m/it/10 GM$|\C70/rm/m/n/10/ff ^^L|
  []
@@ -2842,11 +2856,11 @@ Overfull \hbox (12.17871pt too wide) in paragraph at lines 135--137
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [23]) [24] (./sections/QFT.tex
-Package marginnote Info: Margin note 28.1 is on absolute page 28
+ [24]) [25] (./sections/QFT.tex
+Package marginnote Info: Margin note 29.1 is on absolute page 29
 (marginnote)              on input line 1.
 Package marginnote Info: right page because not two side mode on input line 1.
-Package marginnote Info: xpos seems to be 101.92578pt,
+Package marginnote Info: xpos seems to be 30.71661pt,
 (marginnote)             \marginnoterightadjust ignored on input line 1.
 ) (./sections/QFT/Quantum-Mechanics.tex
 Overfull \hbox (0.51775pt too wide) in paragraph at lines 11--13
@@ -2854,18 +2868,18 @@ Overfull \hbox (0.51775pt too wide) in paragraph at lines 11--13
  []
 
 
-LaTeX Warning: Reference `sec:##' on page 25 undefined on input line 14.
+LaTeX Warning: Reference `sec:##' on page 26 undefined on input line 14.
 
 
-Underfull \vbox (badness 7944) has occurred while \output is active []
+Underfull \vbox (badness 5667) has occurred while \output is active []
 
- [25] [26]) [27] (./sections/Appendix.tex
-Package marginnote Info: Margin note 31.1 is on absolute page 31
+ [26] [27]) [28] (./sections/Appendix.tex
+Package marginnote Info: Margin note 32.1 is on absolute page 32
 (marginnote)              on input line 1.
 Package marginnote Info: right page because not two side mode on input line 1.
-Package marginnote Info: xpos seems to be 101.92578pt,
+Package marginnote Info: xpos seems to be 30.71661pt,
 (marginnote)             \marginnoterightadjust ignored on input line 1.
-) (./sections/Appendix/Dimensional.tex) [28] (./sections/Appendix/N-sphere.tex
+) (./sections/Appendix/Dimensional.tex) [29] (./sections/Appendix/N-sphere.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 1.
 
@@ -2882,23 +2896,20 @@ Overfull \hbox (2.29945pt too wide) in paragraph at lines 2--9
 []\C70/rm/m/n/10/8f Ù \C70/rm/m/n/10/4e ^^@ \C70/rm/m/n/10/82 ‚ \C70/rm/m/n/10/62 ^^Q \C70/rm/m/n/10/4e ì \C70/rm/m/sc/10/78 ^^T \C70/rm/m/sc/10/7a v$\OML/lmm/m/it/10 n$\C70/rm/m/sc/10/7e ô \C70/rm/m/n/10/74 ^^C \C70/rm/m/sc/10/76 „ \C70/rm/m/n/10/4f S \C70/rm/m/n/10/79 ï \C70/rm/m/n/10/4e ^^N \C70/rm/m/n/10/88 h \C70/rm/m/n/10/97 b \C70/rm/m/n/10/79 ï \C70/rm/m/sc/10/95 î \C70/rm/m/n/10/98 ˜\T1/lmr/m/n/10 .\C70/rm/m/n/10/62 ^^Q \C70/rm/m/n/10/4e ì \C70/rm/m/sc/10/57 ( \C70/rm/m/n/10/8f Ù \C70/rm/m/sc/10/91 Ì \C70/rm/m/sc/10/8b ô \C70/rm/m/sc/10/76 „ |\C70/rm/m/n/10/20 ^^\|$\OML/lmm/m/it/10 n$\C70/rm/m/sc/10/7e ô \C70/rm/m/n/10/74 ^^C|\C70/rm/m/n/10/20 ^^]| \C70/rm/m/n/10/63 ^^G \C70/rm/m/sc/10/76 „ \C70/rm/m/n/10/66 / \C70/rm/m/n/10/5d L \C70/rm/m/n/10/51 e$\U/msb/m/n/10 R[]$\C70/rm/m/n/10/4e -
  []
 
-
-Underfull \vbox (badness 3815) has occurred while \output is active []
-
- [29]
-<figures/V_n(1).jpg, id=843, 416.757pt x 275.15422pt>
+[30]
+<figures/V_n(1).jpg, id=847, 416.757pt x 275.15422pt>
 File: figures/V_n(1).jpg Graphic file (type jpg)
 <use figures/V_n(1).jpg>
 Package pdftex.def Info: figures/V_n(1).jpg  used on input line 60.
 (pdftex.def)             Requested size: 294.86131pt x 194.6765pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 61.
-<figures/S_n(1).jpg, id=844, 416.757pt x 274.19382pt>
+<figures/S_n(1).jpg, id=848, 416.757pt x 274.19382pt>
 File: figures/S_n(1).jpg Graphic file (type jpg)
 <use figures/S_n(1).jpg>
 Package pdftex.def Info: figures/S_n(1).jpg  used on input line 66.
 (pdftex.def)             Requested size: 294.86131pt x 193.997pt.
- [30 <./figures/V_n(1).jpg> <./figures/S_n(1).jpg>] [31])
+ [31 <./figures/V_n(1).jpg> <./figures/S_n(1).jpg>] [32])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
  (./CTP.aux)
@@ -2915,18 +2926,18 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 42767 strings out of 492649
- 795650 string characters out of 6133384
- 866160 words of memory out of 5000000
- 45161 multiletter control sequences out of 15000+600000
+ 42769 strings out of 492649
+ 795668 string characters out of 6133384
+ 865195 words of memory out of 5000000
+ 45162 multiletter control sequences out of 15000+600000
  780973 words of font info for 441 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 65i,20n,95p,10543b,946s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 65i,20n,95p,10543b,959s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}<c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf>{c:/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simkai.ttf>{c:/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}<c:/Windows/Fonts/simhei.ttf>{c:/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}<c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simkai.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmbx9.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi5.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri9.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy5.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on CTP.pdf (34 pages, 1463019 bytes).
+Output written on CTP.pdf (35 pages, 1462168 bytes).
 PDF statistics:
- 1495 PDF objects out of 1728 (max. 8388607)
- 1164 compressed objects within 12 object streams
- 242 named destinations out of 1000 (max. 500000)
+ 1499 PDF objects out of 1728 (max. 8388607)
+ 1167 compressed objects within 12 object streams
+ 243 named destinations out of 1000 (max. 500000)
  602 words of extra memory for PDF output out of 10000 (max. 10000000)
 
