@@ -3,8 +3,8 @@
 \contentsline {section}{\numberline {1}坐标系}{2}{section.1}
 \contentsline {subsection}{\numberline {1.1}直角坐标系}{3}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}柱坐标系}{3}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}球坐标系}{3}{subsection.1.3}
-\contentsline {section}{\numberline {2}由欧式坐标诱导的线性空间}{5}{section.2}
+\contentsline {subsection}{\numberline {1.3}球坐标系}{4}{subsection.1.3}
+\contentsline {section}{\numberline {2}由局部坐标系诱导的线性空间}{5}{section.2}
 \contentsline {subsection}{\numberline {2.1}切空间}{5}{subsection.2.1}
 \contentsline {section}{\numberline {3}什么是场}{6}{section.3}
 \contentsline {section}{\numberline {4}流形}{6}{section.4}
