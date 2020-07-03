@@ -1,0 +1,110 @@
+\section{量子力学}\label{sec:QM}
+		
+    笼统的说，将一个经典物理系统进行量子化的方法有三种.
+    
+    第一种方法是利用波动力学进行量子化，这种方法的核心是Schrodinger方程：
+    \begin{equation}
+        -\frac{\hbar^2}{2m}\nabla^2\psi(\overrightarrow{x},t)+V(\overrightarrow{x})\psi(\overrightarrow{x},t)=i\hbar\frac{\partial}{\partial t}\psi(\overrightarrow{x},t).
+    \end{equation}
+    如你所见，Schrodinger方程是一个复的二阶偏微分方程，整个波动力学围绕这个方程展开，不停的解方程，这一过程用到的那些特殊函数我至今没有弄懂.但我可以不负责任的说，整个量子力学的核心不是微分方程，而是代数.因此，接下来的内容与你会不会球谐函数、Legendre函数无关.
+
+    第二种方法是利用矩阵力学进行量子化，这种方法来源于Hamilton力学.之前，我们在Hamilton力学中引入了一个Lie代数结构，称为Poisson括号.通过计算我们发现，整个Ha-
+    milton力学都能改写成Poisson括号的形式，体现出和谐的统一性.使用这种方法，我们能对量子力学进行公理化构造，得出非常好的结论.
+
+    至于第三种方法，我们先卖个关子，等到\ref{sec:#}再进行阐述.
+
+    现在，我们给出量子力学的5条公理，接下来的内容完全建立在这5条公理之上.我们要声明，这5条公理不可证伪，因此不存在“为什么是这样”的问题.物理归根结底是一门以实验为基础的学科，以这5条公理为基础建立的整个量子力学体系经受了住大量实验的验证，因此我们说这5条公理是有效的.
+    \begin{definition}
+        给定一个孤立的力学系统，可根据如下5条公理构建一个量子力学系统：
+        \begin{enumerate}
+            \item 存在一个复Hilbert空间$\mathcal{H}$，量子系统的状态由$\mathcal{H}$中的矢量$\vert\psi\rangle$	描述，两个矢量$\vert\psi\rangle ,c\vert\psi\rangle(c\in\mathbb{C})$	描述相同状态.		
+            \item 经典力学中的力学量$A(\overrightarrow{x} ,t)$对应了$\mathcal{H}$中的一个Hermitian算子
+            $$\hat{A}(\overrightarrow{x} ,t):\mathcal{H}\rightarrow \mathcal{H},\hat{A}=\hat{A}^\dagger.$$
+            对$A$的测量值是$\hat{A}$的特征值.
+            \item 力学量$A,B$的Poisson括号对应了Hermitian算符$\hat{A},\hat{B}$的对易括号
+            $$\{A,B\}\Rightarrow\frac{1}{i\hbar}[\hat{A},\hat{B}],$$
+            其中$[\hat{A},\hat{B}]=\hat{A}\hat{B}-\hat{B}\hat{A}$.
+            \item 若某一时刻量子系统处于$\vert\psi\rangle$状态，我们记此时测量力学量$A$的期望为$\langle A\rangle$，它满足
+            $$\langle A\rangle =\frac{\langle\psi\vert\hat{A}\vert\psi\rangle}{\langle\psi\vert\psi\rangle}.$$
+            \item 豆腐脑要吃甜的.
+        \end{enumerate}
+    \end{definition}
+    \begin{remark}\ 
+        \begin{enumerate}
+            \item 完备的内积空间即Hilbert空间.其中完备性要求空间中的任意Cauchy序列均收敛，内积结构使得空间拥有了度量.
+            
+            $\mathcal{H}$存在一个对偶空间$\mathcal{H}^*$，$\mathcal{H}^*$中的矢量记为$\langle\psi\vert$.设算子$\hat{A}$的一组特征值$\{a_n\}$对应的正交归一特征向量为$\vert n\rangle $，满足$\langle m\vert n\rangle=\delta_{mn}$，其中由$\langle\cdot \vert\cdot\rangle:\mathcal{H}\times \mathcal{H}\rightarrow \mathbb{C} $诱导的内积结构就是$\mathcal{H}$上的内积.
+            \item 算子$\hat{A}$的Hermitian性使得$\hat{A}$的特征值必定是实数.这是因为
+            \begin{eqnarray*}
+                \hat{A}\vert\psi_n\rangle=a_n\vert\psi_n\rangle&\Rightarrow&\langle\psi_n\vert\hat{A}\vert\psi_n\rangle=a_n\langle\psi_n\vert\psi_n\rangle;\\
+                \langle\psi_n\vert\hat{A}^\dagger=a^*_n\langle\psi_n\vert&\Rightarrow&\langle\psi_n\vert\hat{A}^\dagger\vert\psi_n\rangle=a^*_n\langle\psi_n\vert\psi_n\rangle,
+            \end{eqnarray*}
+            考虑到$\hat{A}$的Hermitian性，于是有
+            $$a^*_n\langle\psi_n\vert\psi_n\rangle=\langle\psi_n\vert\hat{A}^\dagger\vert\psi_n\rangle=\langle\psi_n\vert\hat{A}\vert\psi_n\rangle=a_n\langle\psi_n\vert\psi_n\rangle,$$
+            要使等式成立，则必有$a^*_n=a_n$，满足这一性质的数即实数.这样约定是因为量子系统中出现的测量值为复数时没有意义.
+            \item 由(\ref{eq:xxppxp})得
+            \begin{eqnarray*}
+                \{x^\mu,x^\nu\}&=&0\Rightarrow\frac{1}{i\hbar}[\hat{x}^\mu,\hat{x}^\nu]=0;\\
+                \{p_\mu,p_\nu\}&=&0\Rightarrow\frac{1}{i\hbar}[\hat{p}_\mu,\hat{p}_\nu]=0;\\
+                \{x^\mu,p_\nu\}&=&\delta^\mu_\nu\Rightarrow\frac{1}{i\hbar}[\hat{x}^\mu,\hat{p}_\nu]=\delta^\mu_\nu.
+            \end{eqnarray*}
+            \item 若系统的状态矢量$\vert\psi\rangle$是归一化的，则$\langle\psi\vert\psi\rangle=1$，此时$\langle A\rangle =\langle\psi\vert\hat{A}\vert\psi\rangle$.
+            \item 豆腐脑不可以是咸的.
+        \end{enumerate}
+    \end{remark}
+
+    接下来我们便可以开始正题了.
+    \subsection{绘景}
+        首先，我们给出一个描述力学量算符随时间演化的方程，称为Heisenberg方程.
+        \begin{definition}Heisenberg方程是对(\ref{eq:heq1})量子化的结果
+            \begin{equation}\label{eq:heq2}
+                \frac{dA}{dt}=\{A,H\}\Rightarrow\frac{d\hat{A}}{dt}=\frac{1}{i\hbar}[\hat{A},\hat{H}].
+            \end{equation}
+        \end{definition}
+        (\ref{eq:heq2})是Hamilton力学在量子力学公理下的直接结论，它的解具有特别的结构.
+        \begin{lemma}
+            (\ref{eq:heq2})的解形如
+            \begin{equation}\label{eq:heq'ssolution}
+                \hat{A}(t)=e^{-\frac{1}{i\hbar}\hat{H}t}\hat{A}(0)e^{\frac{1}{i\hbar}\hat{H}t}.
+            \end{equation}
+            
+        \end{lemma}
+        \begin{proof}
+            \begin{eqnarray*}
+                \frac{d}{d t}\left(e^{-\frac{1}{i \hbar} \hat{H} t} \hat{A}(0) e^{\frac{1}{i \hbar} \hat{H} t}\right)&=&\frac{d}{d t}\left(e^{-\frac{1}{i \hbar}\hat{H} t}\right)\hat{A}(0) e^{\frac{1}{i \hbar} \hat{H} t}+e^{-\frac{1}{i \hbar} \hat{H} t} \hat{A}(0) \frac{d}{d t}\left(e^{\frac{1}{i \hbar} \hat{H} t}\right)\\
+                &=&-\frac{1}{i \hbar} \hat{H} e^{-\frac{1}{i \hbar} \hat{H} t} \hat{A}(0) e^{\frac{1}{i \hbar} \hat{H} t}+e^{-\frac{1}{i \hbar} \hat{H} t} \hat{A}(0) \frac{1}{i \hbar} \hat{H} e^{\frac{1}{i \hbar} \hat{H} t} \\
+                &=&-\frac{1}{i \hbar} \hat{H} \hat{A}(t)+\frac{1}{i \hbar} \hat{A}(t) \hat{H}=\frac{1}{i \hbar}[\hat{A}, \hat{H}].
+            \end{eqnarray*}
+        \end{proof}
+        \begin{remark}
+            为简化记号，我们命
+        \begin{eqnarray*}
+            U(t)&\equiv&e^{\frac{1}{i \hbar} \hat{H} t};\\
+            U^\dagger (t)&\equiv&e^{-\frac{1}{i \hbar} \hat{H} t},
+        \end{eqnarray*}
+        于是(\ref{eq:heq'ssolution})可以写成
+        \begin{equation}\label{eq:heq'ssolution2}
+            \hat{A}(t)=U^\dagger(t)\hat{A}(0)U(t).
+        \end{equation}
+        \end{remark}
+        
+        我们将Heisenberg方程描述的体系称为Heisenberg绘景.在Heisenberg绘景下，算符含时，态不含时.我们设系统的归一化的状态为$\vert\psi\rangle_H$，则力学量$A(t)$的期望
+        \begin{eqnarray}
+            \langle A\rangle&=&\langle\psi\vert_H\hat{A}(t)\vert\psi\rangle_H\notag\\
+            &=&\langle\psi\vert_H U^\dagger(t)\hat{A}(0)U(t)\vert\psi\rangle_H\notag\\
+            &=&\langle\psi(t)\vert_S\hat{A}(0)\vert\psi(t)\rangle_S,
+        \end{eqnarray}
+        其中
+        \begin{equation}\label{eq:transformation}
+            \vert\psi(t)\rangle_S=U(t)\vert\psi\rangle_H,
+        \end{equation}
+        这个操作称为绘景变换——它将Heisenberg绘景下的状态矢量$\vert\psi\rangle_H$变换为Schrodinger绘景下的状态矢量$\vert\psi(t)\rangle_S$.在Schrodinger绘景下，算符不含时，态含时.我们将(\ref{eq:transformation})两侧同时对时间求导，于是得到
+        \begin{equation}\label{eq:seq1}
+            \frac{\partial}{\partial t}|\psi\rangle_{S}=\frac{\partial}{\partial t} e^{\frac{1}{i \hbar} \hat{H} t}|\psi\rangle_{H}=\frac{1}{i \hbar} \hat{H} e^{\frac{1}{i \hbar} \hat{H} t}|\psi\rangle_{H}=\frac{1}{i\hbar} \hat{H}|\psi\rangle_{S},
+        \end{equation}
+        (\ref{eq:seq1})即Schrodinger方程
+        \begin{definition}Schrodinger方程为
+            \begin{equation}\label{eq:seq2}
+                \hat{H}|\psi\rangle_{S}=i\hbar\frac{\partial}{\partial t}|\psi\rangle_{S}.
+            \end{equation}
+        \end{definition}

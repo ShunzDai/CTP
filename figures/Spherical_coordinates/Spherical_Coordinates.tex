@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage{verbatim}
+\usepackage{tikz}  
+\usepackage{3dplot} 
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{2mm}
+ 
+\begin{document}
+ 
+\tdplotsetmaincoords{60}{110}
+ 
+\pgfmathsetmacro{\rvec}{.8}
+\pgfmathsetmacro{\thetavec}{40}
+\pgfmathsetmacro{\phivec}{45}
+ 
+\pgfmathsetmacro{\dphivec}{20}
+\pgfmathsetmacro{\dthetavec}{20}
+\pgfmathsetmacro{\drvec}{.2}
+ 
+\begin{tikzpicture}[scale=5,tdplot_main_coords]
+ 
+\coordinate (O) at (0,0,0);
+ 
+\tdplotsetcoord{A}{\rvec}{\thetavec}{\phivec}
+\tdplotsetcoord{B}{\rvec}{\thetavec + \dthetavec}{\phivec}
+\tdplotsetcoord{C}{\rvec}{\thetavec + \dthetavec}{\phivec + \dphivec}
+\tdplotsetcoord{D}{\rvec}{\thetavec}{\phivec + \dphivec}
+ 
+\tdplotsetcoord{E}{\rvec + \drvec}{\thetavec}{\phivec}
+\tdplotsetcoord{F}{\rvec + \drvec}{\thetavec + \dthetavec}{\phivec}
+\tdplotsetcoord{G}{\rvec + \drvec}{\thetavec + \dthetavec}{\phivec + \dphivec}
+\tdplotsetcoord{H}{\rvec + \drvec}{\thetavec}{\phivec + \dphivec}
+ 
+\draw[thick,->] (0,0,0) -- (0.8,0,0) node[anchor=north east]{$x$};
+\draw[thick,->] (0,0,0) -- (0,0.8,0) node[anchor=north west]{$y$};
+\draw[thick,->] (0,0,0) -- (0,0,0.8) node[anchor=south]{$z$};
+ 
+ 
+\draw[-stealth,color=red] (O) -- (A) node[midway, anchor = south, color=black]{$r$};
+\draw[color=red] (O) -- (B);
+\draw[dashed, color=red] (O) -- (C);
+\draw[dashed, color=red] (O) -- (D);
+ 
+\draw[dashed, color=red] (O) -- (Axy);
+\draw[dashed, color=red] (A) -- (Axy);
+\draw[dashed, color=red] (O) -- (Dxy);
+\draw[dashed, color=red] (D) -- (Dxy);
+\draw[](A) -- (E) node[midway, anchor = south, color=black]{$dr$};
+\draw[](B) -- (F);
+\draw[dashed](C) -- (G);
+\draw[dashed](D) -- (H);
+ 
+\tdplotdrawarc{(O)}{0.2}{0}{\phivec}{anchor=north}{$\phi _0$}
+\tdplotdrawarc{(O)}{0.35}{\phivec}{\phivec + \dphivec}{anchor=north}{$d\phi$}
+ 
+\tdplotsetthetaplanecoords{\phivec}
+ 
+\tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.5}{0}{\thetavec}{anchor=south west}{$\theta _0$}
+\tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.3}{\thetavec}{\thetavec + \dthetavec}{anchor=south west}{$d\theta$}
+ 
+\tdplotdrawarc[tdplot_rotated_coords]{(O)}{\rvec}{\thetavec}{\dthetavec + \thetavec}{}{}
+\tdplotdrawarc[tdplot_rotated_coords]{(O)}{\rvec + \drvec}{\thetavec}{\dthetavec + \thetavec}{}{}
+ 
+\tdplotsetthetaplanecoords{\phivec + \dphivec}
+\tdplotdrawarc[dashed, tdplot_rotated_coords]{(O)}{\rvec}{\thetavec}{\dthetavec + \thetavec}{}{}
+\tdplotdrawarc[tdplot_rotated_coords]{(O)}{\rvec + \drvec}{\thetavec}{\dthetavec + \thetavec}{}{}
+ 
+\tdplotsetrotatedcoords{55}{-50.4313}{-6.4086}
+\tdplotdrawarc[dashed, tdplot_rotated_coords]{(O)}{\rvec}{0}{12.8173}{}{}
+\tdplotdrawarc[tdplot_rotated_coords]{(O)}{\rvec + \drvec}{0}{12.8173}{}{}
+ 
+\tdplotsetrotatedcoords{55}{-30.3813}{-8.6492}
+\tdplotdrawarc[dashed, tdplot_rotated_coords]{(O)}{\rvec}{0}{17.2983}{}{}
+\tdplotdrawarc[tdplot_rotated_coords]{(O)}{\rvec + \drvec}{0}{17.2983}{}{}
+\end{tikzpicture}
+ 
+\end{document}

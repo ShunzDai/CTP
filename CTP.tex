@@ -1,0 +1,75 @@
+\documentclass[10pt]{article}
+\pdfoutput=1  					%xelatex编译注释掉
+\usepackage{../tex/NotesTeX}
+\usepackage[UTF8]{ctex}  		%pdfTex中文环境
+%\usepackage{CTEX}  			%xelatex编译中文环境
+%======================水印环境======================
+\usepackage{draftwatermark}		%水印，参数设置：仅在首页出现 [firstpage] ；仅在尾页出现 [lastpage]
+\SetWatermarkText{DRAFT}		%水印自定义文字
+\SetWatermarkLightness{0.9}		%水印透明度，默认0.8，范围0-1
+%\SetWatermarkScale{1}			%水印大小，默认1.2
+%======================水印环境======================
+%======================图表环境======================
+%\usepackage{background}		%封面背景
+\usepackage{graphicx}			%图表环境
+\usepackage{subfigure}			%并排图片宏%
+\usepackage{booktabs}			%三线表线条
+\usepackage{caption}			%可能要用到的图表标题宏包
+%======================图表环境======================
+%======================其他环境======================
+\usepackage[utf8]{inputenc}		%调用\input函数
+%\usepackage{showframe}			%显示框架
+%======================其他环境======================
+
+\title{\begin{center}{\Huge \textit{家用理论物理教程}}\\{{\itshape 从入门到转行}}\end{center}}
+	\author{Shunz Dai\footnote{\textit{Last update: }\today}\footnote{\href{https://ShunzDai.github.io/}{\textit{My personal blog}}}}
+
+\affiliation{Physics and Space Science College,China West Normal University}
+
+\emailAdd{196883@outlook.com}
+
+
+%\backgroundsetup{scale=1, angle=0, opacity = 0.1,contents = {\includegraphics[width=\paperwidth, height=\paperwidth,keepaspectratio]{figures/background.png}}}
+
+\begin{document}
+
+	\maketitle
+	\flushbottom
+	\newpage
+	\pagestyle{fancynotes}
+	\input{chapters/Introduction.tex}
+		\newpage
+	\input{chapters/Differential-Geometry.tex}
+		\input{chapters/Differential-Geometry/Coordinates.tex}
+		\input{chapters/Differential-Geometry/Linear-Space.tex}
+		\input{chapters/Differential-Geometry/Field.tex}
+		\input{chapters/Differential-Geometry/Manifold.tex}
+		\input{chapters/Differential-Geometry/Connection.tex}
+		\newpage
+	\input{chapters/Analytical-Mechanics.tex}
+		\input{chapters/Analytical-Mechanics/Lagrange.tex}
+		\input{chapters/Analytical-Mechanics/Hamilton.tex}
+		\newpage
+	\input{chapters/GR.tex}
+		\input{chapters/GR/Field-Equation.tex}
+		\input{chapters/GR/Exact-Solutions.tex}
+		\newpage
+	\input{chapters/QFT.tex}
+		\input{chapters/QFT/Quantum-Mechanics.tex}
+		\newpage
+	\input{chapters/Appendix.tex}
+		\input{chapters/Appendix/Dimensional.tex}
+		\newpage
+		\input{chapters/Appendix/N-sphere.tex}
+		\newpage
+	
+\end{document}
+
+
+%\begin{equation}  公式居中编号
+%	\begin{split}
+		
+%	\end{split}
+%\end{equation}
+
+%\notag  某行公式不编号
