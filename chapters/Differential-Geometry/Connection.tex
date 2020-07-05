@@ -1,12 +1,12 @@
 \section{联络}
 	\subsection{仿射联络}
-		对于任意标量场$\phi\in \varGamma(T_{(0,0)}M)$，其外微分$d\phi$仍是是一个张量场
+		对于任意标量场$\phi\in \varGamma(T_{(0,0)}M)$，其外微分
 		\begin{equation}
 				 d\phi=\frac{\partial\phi}{\partial x^\mu}dx^\mu=\frac{\partial\phi}{\partial {x}^\mu}\frac{\partial{x}^\mu}{\partial {x'}^\nu}d{x'}^\nu=\frac{\partial{\phi'}}{\partial {x'}^\nu}d{x'}^\nu\in \varGamma(T_{(0,1)}M),
 		\end{equation}
 		这意味着$d\phi$仍是张量丛截面的元素，用学物理家的话来说也就是$d\phi$仍然满足张量的变换规律.
 		
-		一个自然的问题是，对于切矢量场或余切矢量场，其外微分是否仍然是张量丛截面的元素？但问题就出在这，外微分算子是一个定义在外形式丛截面上的线性算子，切矢量场不是外形式丛截面中的元素，因此我们无法对一个切矢量场求外微分；余切矢量场作为1微分形式场，虽然它是外形式丛截面的元素，但它只是一种全反对称的张量场，我们无法对一个一般的非全反对称张量场求外微分.这些困难意味着我们需要推广外微分算子，寻找一个定义在一般张量丛截面$\varGamma(T_{(p,q)}M)$上的线性微分算子，让我们能对那些不在外形式丛截面中的张量场进行“微分”运算.这样构造的线性微分算子就是\textbf{仿射联络}.
+		一个自然的问题是，对于切矢量场或余切矢量场，其外微分是否仍然是张量丛截面的元素？但问题就出在这，外微分算子是一个定义在外形式丛截面上的线性算子，切矢量场不是外形式丛截面的元素，因此我们无法对一个切矢量场求外微分；余切矢量场虽然是外形式丛截面的元素，但它的外微分只是一种全反对称的协变张量场，我们无法通过外微分运算得到一个非全反对称的高阶协变张量场.这些困难意味着我们需要推广外微分算子，寻找一个定义在一般张量丛截面$\varGamma(T_{(p,q)}M)$上的线性微分算子，让我们能对那些不在外形式丛截面中的张量场进行“微分”运算.这样构造的线性微分算子就是\textbf{仿射联络}.
 		\begin{remark}
 		余切矢量场$\omega\in \varGamma(T_{(0,1)}M)$在局部坐标系改变时满足
 		\begin{equation}\label{eq:domega1}
@@ -20,7 +20,7 @@
 			&=&\left(\frac{\partial{\omega}_\mu}{{\partial}{x}^\sigma}\frac{\partial{x}^\sigma}{\partial {x'}^\rho}\frac{\partial{x}^\mu}{{\partial}{x'}^\nu}+{\omega}_\mu\frac{\partial^2{x}^\mu}{\partial {x'}^\rho{\partial}{x'}^\nu}\right)d{x'}^\rho{\wedge}d{x'}^\nu\\
 			&=&\frac{\partial\omega'_\nu}{{\partial}{x'}^\rho}d{x'}^\rho{\wedge}d{x'}^\nu\notag,
 		\end{eqnarray}
-		注意到\ref{eq:domega2}中产生了一个二阶偏微分项，与张量的变换规律对比可知，这一项破坏了张量的变换规律.但外微分形式场的全反对称特性可以消除掉这一项带来的影响，即
+		注意到(\ref{eq:domega2})中产生了一个二阶偏微分项，与张量的变换规律对比可知，这一项破坏了张量的变换规律.但外微分形式场的全反对称特性可以消除掉这一项带来的影响，即
 		\begin{eqnarray}
 			\frac{\partial\omega'_\nu}{{\partial}{x'}^\rho}d{x'}^\rho{\wedge}d{x'}^\nu&=&2\partial'_{[\rho}\omega'_{\nu]}{dx'}^{\rho}\otimes{dx'}^\nu\notag\\
 				&=&2\left(\partial_{[\sigma}\omega_{\mu]}\frac{\partial{x}^\sigma}{\partial {x'}^\rho}\frac{\partial{x}^\mu}{{\partial}{x'}^\nu}+{\omega}_\mu\frac{\partial^2{x}^\mu}{\partial {x'}^{[\rho}{\partial}{x'}^{\nu]}}\right){dx'}^{\rho}\otimes{dx'}^\nu\notag\\
@@ -81,7 +81,8 @@
 		\end{eqnarray}
 		即
 		$D(dx^\nu)=-{\omega}^\nu_\rho\otimes{dx}^\rho$.
-		至此，我们就能计算任意$A\in T_{(1,0)}(M)$与$B\in T_{(0,1)}(M)$的联络了.在局部坐标系下，我们有：			\begin{eqnarray}
+		至此，我们就能计算任意$A\in \varGamma(T_{(1,0)}M)$与$B\in \varGamma(T_{(0,1)}M)$的联络了.在局部坐标系下，我们有：			
+		\begin{eqnarray}
 			\begin{split}
 				D(A)&=D(A^\mu\partial_\mu)\\
 				&=dA^\mu\otimes\partial_\mu+A^{\mu}D(\partial_\mu)\\
