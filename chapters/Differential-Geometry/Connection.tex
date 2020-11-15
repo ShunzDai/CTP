@@ -43,19 +43,19 @@
 		\end{definition}
 		局部上，联络由一组1微分形式给出.我们先来看自然标架场$\{\partial_\mu\}$的联络，命
 		\begin{equation}
-		D(\partial_\mu)=\omega^\rho_\mu \otimes\partial_\rho={\varGamma^\rho}_{\mu\nu}dx^\nu\otimes \partial_\rho,
+		D(\partial_\mu)={\omega^\rho}_\mu \otimes\partial_\rho={\varGamma^\rho}_{\mu\nu}dx^\nu\otimes \partial_\rho,
 		\end{equation} 
-		其中$\omega^\rho_\mu={\varGamma^\rho}_{\mu\nu}dx^\nu$，${\varGamma^\rho}_{\mu\nu}$称为\textbf{联络系数}，它是局部坐标系中的光滑函数.将$\omega^\rho_\mu$作为矩阵$\omega$第$\rho$行第$\mu$列的元素，这样构造的矩阵$\omega$称为\textbf{联络方阵}.可见，任意两个联络间的差异完全体现在联络方阵上.现在，我们来看联络的变换规律.在标架变换下，由联络的定义立即得到
+		其中${\omega^\rho}_\mu={\varGamma^\rho}_{\mu\nu}dx^\nu$，${\varGamma^\rho}_{\mu\nu}$称为\textbf{联络系数}，它是局部坐标系中的光滑函数.将${\omega^\rho}_\mu$作为矩阵$\omega$第$\rho$行第$\mu$列的元素，这样构造的矩阵$\omega$称为\textbf{联络方阵}.可见，任意两个联络间的差异完全体现在联络方阵上.现在，我们来看联络的变换规律.在标架变换下，由联络的定义立即得到
 		\begin{eqnarray}
 			D(\partial'_\nu)&=&D\left(\frac{\partial{x^\mu}}{\partial{x'}^\nu}{\partial}_\mu\right)\notag\\
 			&=&d\left(\frac{\partial{x^\mu}}{\partial{x'}^\nu}\right)\otimes{\partial}_\mu+\frac{\partial{x^\mu}}{\partial{x'}^\nu}D\left({\partial}_\mu\right)\notag\\
-			&=&\left[d\left(\frac{\partial{x^\rho}}{\partial{x'}^\nu}\right)+\frac{\partial{x^\mu}}{\partial{x'}^\nu}\omega^\rho_\mu\right]\otimes{\partial}_\rho\notag\\
-			&=&\left[d\left(\frac{\partial{x^\rho}}{\partial{x'}^\nu}\right)\frac{\partial{{x'}^\sigma}}{\partial{x^\rho}}+\frac{\partial{x^\mu}}{\partial{x'}^\nu}\omega^\rho_\mu\frac{\partial{{x'}^\sigma}}{\partial{x^\rho}}\right]\otimes\partial'_\sigma\notag\\
+			&=&\left[d\left(\frac{\partial{x^\rho}}{\partial{x'}^\nu}\right)+\frac{\partial{x^\mu}}{\partial{x'}^\nu}{\omega^\rho}_\mu\right]\otimes{\partial}_\rho\notag\\
+			&=&\left[d\left(\frac{\partial{x^\rho}}{\partial{x'}^\nu}\right)\frac{\partial{{x'}^\sigma}}{\partial{x^\rho}}+\frac{\partial{x^\mu}}{\partial{x'}^\nu}{\omega^\rho}_\mu\frac{\partial{{x'}^\sigma}}{\partial{x^\rho}}\right]\otimes\partial'_\sigma\notag\\
 			&=&{\omega'}^\sigma_\nu\otimes\partial'_\sigma,
 		\end{eqnarray}
 		其中
 		\begin{equation}\label{eq:connection}
-		{\omega'}^\sigma_\nu=d\left(\frac{\partial{x^\rho}}{\partial{x'}^\nu}\right)\frac{\partial{{x'}^\sigma}}{\partial{x^\rho}}+\frac{\partial{x^\mu}}{\partial{x'}^\nu}\omega^\rho_\mu\frac{\partial{{x'}^\sigma}}{\partial{x^\rho}},
+		{\omega'}^\sigma_\nu=d\left(\frac{\partial{x^\rho}}{\partial{x'}^\nu}\right)\frac{\partial{{x'}^\sigma}}{\partial{x^\rho}}+\frac{\partial{x^\mu}}{\partial{x'}^\nu}{\omega^\rho}_\mu\frac{\partial{{x'}^\sigma}}{\partial{x^\rho}},
 		\end{equation}
 		这就是联络方阵在局部标架场改变时的变换公式.我们还可以进一步展开(\ref{eq:connection})，得到
 		\begin{equation}
@@ -69,15 +69,17 @@
 		现在现在我们来考察$\{\partial_\mu\}$的对偶标架$\{dx^\mu\}$的联络.$D(dx^\mu)$由下式确定
 		$$d\left(\partial_\mu,dx^\nu\right)=\left(D(\partial_\mu),dx^\nu\right)+\left(\partial_\mu,D(dx^\nu)\right),$$
 		我们设
-		$$D(dx^\nu)={\omega^*}^\nu_\rho\otimes{dx}^\rho,$$
+		$$D(dx^\nu)={{\omega^*}^\nu}_\rho\otimes{dx}^\rho,$$
 		于是
-		$$\left(\partial_\mu,D(dx^\nu)\right)=\left(\partial_\mu,{\omega^*}^\nu_\rho\otimes{dx}^\rho\right)={\omega^*}^\nu_\rho\delta^\rho_\mu={\omega^*}^\nu_\mu.$$
+		$$\left(\partial_\mu,D(dx^\nu)\right)=\left(\partial_\mu,{{\omega^*}^\nu}_\rho\otimes{dx}^\rho\right)={\omega^*}^\nu_\rho\delta^\rho_\mu={{\omega^*}^\nu}_\mu.$$
 		考虑到对偶标架满足
 		$$\left(\partial_\mu,dx^\nu\right)=\delta^\nu_\mu,$$ 
 		于是得到
 		\begin{eqnarray}
-			{\omega^*}^\nu_\mu&=&\left(\partial_\mu,D(dx^\nu)\right)=-\left(D(\partial_\mu),dx^\nu\right)\\
-				&=&-\left(\omega^\rho_\mu\otimes\partial_\rho,dx^\nu\right)=-{\omega}^\rho_\mu\delta^\nu_\rho=-{\omega}^\nu_\mu,
+			\begin{split}
+				{{\omega^*}^\nu}_\mu&=&\left(\partial_\mu,D(dx^\nu)\right)=-\left(D(\partial_\mu),dx^\nu\right)\\
+				&=&-\left({\omega^\rho}_\mu\otimes\partial_\rho,dx^\nu\right)=-{\omega}^\rho_\mu\delta^\nu_\rho=-{\omega}^\nu_\mu,
+			\end{split}
 		\end{eqnarray}
 		即
 		$D(dx^\nu)=-{\omega}^\nu_\rho\otimes{dx}^\rho$.
@@ -130,4 +132,20 @@
 				\end{split}		
 			\end{equation}
 		\end{definition}
-    \subsection{Riemannian流形上的容许联络}
+	\subsection{Riemannian流形上的容许联络}
+		在上一节中，我们尚未引入度规张量场，这表示联络的定义与度量无关。Riemannian流形具有度量结构，于是我们可以在Riemannian流形上定义一种依赖度量结构的仿射联络，称为Levi-Civita联络。这意味着我们可以用度规张量场将联络展开。
+		\begin{definition}
+			Riemannian流形上的Levi-Civita联络满足
+			\begin{equation}
+				D(G)=0.
+			\end{equation}
+		\end{definition}
+		这表示
+		\begin{equation}
+			\begin{split}
+				0&=D(g_{\mu\nu}dx^\mu\otimes dx^\nu)\\
+				&=dg_{\mu\nu}\otimes dx^\mu\otimes dx^\nu-g_{\mu\nu}{\omega^\mu}_\rho\otimes dx^\rho\otimes dx^\nu\\
+				&=dg_{\mu\nu}\otimes dx^\mu\otimes dx^\nu-g_{\mu\nu}{\varGamma^\mu}_{\rho\sigma}dx^\sigma\otimes dx^\rho\otimes dx^\nu-g_{\mu\nu}{\varGamma^\nu}_{\rho\sigma}dx^\mu\otimes dx^\sigma\otimes dx^\rho\\
+				&=
+			\end{split}
+		\end{equation}

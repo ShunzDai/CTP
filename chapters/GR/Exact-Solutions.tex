@@ -42,41 +42,41 @@
         \end{eqnarray*}
         又知测地线方程为
         \begin{equation}
-            \ddot{x}^\rho+\Gamma^\rho_{\mu\nu}\dot{x}^\mu\dot{x}^\nu=0
+            \ddot{x}^\rho+\varGamma^\rho_{\mu\nu}\dot{x}^\mu\dot{x}^\nu=0
         \end{equation}
         将这四个等式与测地线方程作对比，容易看出，静态球对称时空的非零Christoffel符号分别为
         \begin{equation}
             \begin{split}
-                    \Gamma^0_{10}&=\Gamma^0_{01}=\frac{A'}{2A}\\
-                    \Gamma^1_{00}&=\frac{A'}{2B};\Gamma^1_{11}=\frac{B'}{2B};\Gamma^1_{22}=-\frac{r}{B};\Gamma^1_{33}=-\frac{r\sin^2\theta}{B}\\
-                    \Gamma^2_{12}&=\Gamma^2_{21}=\frac{1}{r};\Gamma^2_{33}=-\sin\theta \cos\theta\\
-                    \Gamma^3_{23}&=\Gamma^3_{32}=\frac{\cos\theta}{\sin\theta};\Gamma^3_{13}=\Gamma^3_{31}=\frac{1}{r}
+                    {\varGamma^0}_{10}&={\varGamma^0}_{01}=\frac{A'}{2A}\\
+                    {\varGamma^1}_{00}&=\frac{A'}{2B};{\varGamma^1}_{11}=\frac{B'}{2B};{\varGamma^1}_{22}=-\frac{r}{B};{\varGamma^1}_{33}=-\frac{r\sin^2\theta}{B}\\
+                    {\varGamma^2}_{12}&={\varGamma^2}_{21}=\frac{1}{r};{\varGamma^2}_{33}=-\sin\theta \cos\theta\\
+                    {\varGamma^3}_{23}&={\varGamma^3}_{32}=\frac{\cos\theta}{\sin\theta};{\varGamma^3}_{13}=\varGamma^3_{31}=\frac{1}{r}
             \end{split}
         \end{equation}
         
         Riemann曲率张量为
         \begin{equation}
-            {R_{\mu\rho\nu}}^\sigma=-\partial_\mu\Gamma^\sigma_{\rho\nu}+\partial_\rho\Gamma^\sigma_{\mu\nu}-\Gamma^\lambda_{\nu\rho}\Gamma^\sigma_{\mu\lambda}+\Gamma^\lambda_{\mu\nu}\Gamma^\sigma_{\rho\lambda}
+            {R_{\mu\rho\nu}}^\sigma=-\partial_\mu{\varGamma^\sigma}_{\rho\nu}+\partial_\rho{\varGamma^\sigma}_{\mu\nu}-{\varGamma^\lambda}_{\nu\rho}{\varGamma^\sigma}_{\mu\lambda}+{\varGamma^\lambda}_{\mu\nu}{\varGamma^\sigma}_{\rho\lambda}
         \end{equation}
         对$\rho\sigma$指标缩并,得到Ricci张量为
         \begin{equation}
-            R_{\mu\nu}={R_{\mu\rho\nu}}^\rho=-\partial_\mu\Gamma^\rho_{\rho\nu}+\partial_\rho\Gamma^\rho_{\mu\nu}-\Gamma^\lambda_{\nu\rho}\Gamma^\rho_{\mu\lambda}+\Gamma^\lambda_{\mu\nu}\Gamma^\rho_{\rho\lambda}
+            R_{\mu\nu}={R_{\mu\rho\nu}}^\rho=-\partial_\mu{\varGamma^\rho}_{\rho\nu}+\partial_\rho{\varGamma^\rho}_{\mu\nu}-{\varGamma^\lambda}_{\nu\rho}\varGamma^\rho_{\mu\lambda}+{\varGamma^\lambda}_{\mu\nu}{\varGamma^\rho}_{\rho\lambda}
         \end{equation}
         缩并Christoffel符号可以化简为
         \begin{equation}
-            \Gamma^\rho_{\rho\nu}=\partial_\nu ln\sqrt{|g|}
+            {\varGamma^\rho}_{\rho\nu}=\partial_\nu \ln \sqrt{|g|}
         \end{equation}
         其中$g$为度规的行列式，可以算得
         \begin{equation}
-            ln\sqrt{|g|}=ln(ABr^4\sin^2\theta)^\frac{1}{2}=\frac{1}{2}lnA+\frac{1}{2}lnB+2lnr+ln(\sin\theta)
+            \ln \sqrt{|g|}=\ln (ABr^4\sin^2\theta)^\frac{1}{2}=\frac{1}{2}\ln A+\frac{1}{2}\ln B+2\ln r+\ln (\sin\theta)
         \end{equation}
         将其代入Ricci张量中就得到
         \begin{equation}
             \begin{split}
-                    R_{\mu\nu}&=-\partial_\mu\partial_\nu ln\sqrt{|g|}+\Gamma^\lambda_{\mu\nu}\partial_\lambda ln\sqrt{|g|}+\partial_\rho\Gamma^\rho_{\mu\nu}-\Gamma^\lambda_{\nu\rho}\Gamma^\rho_{\mu\lambda}\\
-                    &=-\partial_\mu\partial_\nu \left[\frac{1}{2}lnA+\frac{1}{2}lnB+2lnr+ln(\sin\theta)\right]\\
-                    &+\Gamma^\lambda_{\mu\nu}\partial_\lambda \left[\frac{1}{2}lnA+\frac{1}{2}lnB+2lnr+ln(\sin\theta)\right]\\
-                    &+\partial_\rho\Gamma^\rho_{\mu\nu}-\Gamma^\lambda_{\nu\rho}\Gamma^\rho_{\mu\lambda}
+                    R_{\mu\nu}&=-\partial_\mu\partial_\nu \ln \sqrt{|g|}+{\varGamma^\lambda}_{\mu\nu}\partial_\lambda \ln \sqrt{|g|}+\partial_\rho{\varGamma^\rho}_{\mu\nu}-{\varGamma^\lambda}_{\nu\rho}{\varGamma^\rho}_{\mu\lambda}\\
+                    &=-\partial_\mu\partial_\nu \left[\frac{1}{2}\ln A+\frac{1}{2}\ln B+2\ln r+\ln (\sin\theta)\right]\\
+                    &+{\varGamma^\lambda}_{\mu\nu}\partial_\lambda \left[\frac{1}{2}\ln A+\frac{1}{2}\ln B+2\ln r+\ln (\sin\theta)\right]\\
+                    &+\partial_\rho{\varGamma^\rho}_{\mu\nu}-{\varGamma^\lambda}_{\nu\rho}{\varGamma^\rho}_{\mu\lambda}
             \end{split}
         \end{equation}
         计算可知，Ricci张量的非零元素全部在对角线上

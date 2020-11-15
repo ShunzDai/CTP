@@ -4,7 +4,7 @@
         \begin{definition}
             $\mathbb{R}^n$中的点$p$在坐标系$(x)$下的坐标为$(x^1,\cdots,x^n)$，则$(x^1,\cdots,x^n)$在$p$点诱导了一个线性空间$T_p\mathbb{R}^n$，$T_p\mathbb{R}^n$的元素即导数算符.
         \end{definition}
-        我们将$T_p\mathbb{R}^n$称为切空间,$T_p\mathbb{R}^n$的元素称为切矢量.这个定义是说，任意一个切向量$X\in T_p\mathbb{R}^n$都能通过导数算符在$p$点展开为
+        我们将$T_p\mathbb{R}^n$称为切空间,$T_p\mathbb{R}^n$的元素称为切矢量.这个定义是说，任意一个切向量$X\in T_p\mathbb{R}^n$都能通过延坐标线的导数算符$\partial_\mu$在$p$点展开为
         \begin{equation}\label{eq:tangent 1}
             X=\left(X^\mu\frac{\partial}{\partial x^\mu}\right)\Bigg|_p,
         \end{equation}
@@ -78,3 +78,8 @@
             $\left(\frac{\partial}{\partial r}\ \frac{\partial}{\partial \theta}\ \frac{\partial}{\partial z}\right)$
             转换到直角坐标系下的基底的变换关系.
         \end{exercise}
+    \subsection{余切空间}
+        \begin{definition}
+            $\mathbb{R}^n$中的点$p$在坐标系$(x)$下的坐标为$(x^1,\cdots,x^n)$，则$(x^1,\cdots,x^n)$在$p$点诱导了一个线性空间$T_p^*\mathbb{R}^n$，$T_p^*\mathbb{R}^n$的元素即1微分形式.
+        \end{definition}
+        我们将$T_p^*\mathbb{R}^n$称为余切空间，$T_p^*\mathbb{R}^n$的元素称为余切矢量.这个定义是说，任意一个余切矢量$\omega\in T_p^*\mathbb{R}^n$都能通过延坐标线的微元$dx^\mu$在$p$点展开为
