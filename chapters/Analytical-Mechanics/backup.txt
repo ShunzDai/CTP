@@ -1,0 +1,38 @@
+\begin{example}
+			（最速降线问题）求质点的轨迹方程，使得在同一平面上，质点由A点至B点用时最短.
+			
+			由题可知，我们应该寻找作用量
+			\begin{eqnarray*}
+				S=\frac{1}{\alpha}\int^B_A dt
+			\end{eqnarray*}
+			的极值，其中$t$表示时间，比例系数$\alpha$具有时间的量纲.我们设质点轨迹方程为隐函数$$f(x(t),y(t))=0,$$其中$x$表示质点在水平方向上的坐标，$y$表示质点在竖直方向上的坐标.在一个无穷小的时间间隔$dt$内，质点将会移动
+			\begin{eqnarray*}
+				dl=\sqrt{(dx)^2+(dy)^2}=\sqrt{(dx)^2+\left(\frac{dy}{dx}\right)^2(dx)^2}=\sqrt{1+y'^2}dx,
+			\end{eqnarray*}
+			其中$y'\equiv dy/dx$.考虑到机械能守恒
+			\begin{eqnarray*}
+				\frac{1}{2}m\left(\frac{dl}{dt}\right)^2=mgy,
+			\end{eqnarray*}
+			于是我们得到质点的瞬时速度满足
+			\begin{eqnarray*}
+				\frac{dl}{dt}=\sqrt{2gy}=\frac{\sqrt{1+y'^2}}{dt}dx,
+			\end{eqnarray*}
+			即
+			\begin{eqnarray*}
+				dt=\sqrt{\frac{1+y'^2}{2gy}}dx.
+			\end{eqnarray*}
+			于是我们以$x$为参数，以$y,y'$为泛函变量构造作用量
+			\begin{eqnarray*}
+				S(y(x);y'(x))=\frac{1}{\alpha}\int^B_Adt=\frac{1}{\alpha}\int^B_A\sqrt{\frac{1+y'^2}{2gy}}dx.
+			\end{eqnarray*}
+			现在我们计算$S(y(x);y'(x))$的变分,为了与微分运算$d$区分，我们将变分运算记为$\delta$，则
+			\begin{eqnarray*}
+				\delta S(y(x);y'(x))=\frac{1}{\alpha}\int^B_A\delta\left(\sqrt{\frac{1+y'^2}{2gy}}\right)dx,
+			\end{eqnarray*}
+			其中
+			\begin{eqnarray*}
+				\delta\left(\sqrt{\frac{1+y'^2}{2gy}}\right)&=&\frac{\delta}{\delta y}\left(\sqrt{\frac{1+y'^2}{2gy}}\right)\delta y+\frac{\delta}{\delta y'}\left(\sqrt{\frac{1+y'^2}{2gy}}\right)\delta y'\\
+				&=&-\frac{1}{2y}\sqrt{\frac{1+y'^2}{2gy}}\delta y+\frac{y'}{2gy}\left(\frac{1+y'^2}{2gy}\right)^{-\frac{1}{2}}\delta \left(\frac{dy}{dx}\right)\\
+				&=&-\frac{1}{2y}\sqrt{\frac{1+y'^2}{2gy}}\delta y+\frac{d}{dx}\left[\frac{y'}{2gy}\left(\frac{1+y'^2}{2gy}\right)^{-\frac{1}{2}}\delta y\right]-\frac{d}{dx}\left[\frac{y'}{2gy}\left(\frac{1+y'^2}{2gy}\right)^{-\frac{1}{2}}\right]\delta y\\
+			\end{eqnarray*}
+		\end{example}

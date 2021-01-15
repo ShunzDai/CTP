@@ -37,17 +37,17 @@
 	\subsection{直角坐标系}
 		\begin{marginfigure}
 			\centering
-			\includegraphics[width=1\textwidth]{figures/rectangular_coordinates.png}
-			\caption{直角坐标系}\label{fig:rectangular_coordinates}
+			\input{tikz/Rectangular_Coordinates.tex}
+			\caption{直角坐标系}\label{fig:Rectangular_Coordinates}
 		\end{marginfigure}
-	最典型的例子就是正交直角坐标系，或者说是Cartesian坐标系，如图\ref{fig:rectangular_coordinates}所示.在这种坐标系中，坐标线是直线，且彼此正交.通常，我们用$(x,y,z)$来表述直角坐标系中的点.
+	最典型的例子就是正交直角坐标系，或者说是Cartesian坐标系，如图\ref{fig:Rectangular_Coordinates}所示.在这种坐标系中，坐标线是直线，且彼此正交.通常，我们用$(x,y,z)$来表述直角坐标系中的点.
 	\subsection{柱坐标系}
 		\begin{marginfigure}
 			\centering
-			\includegraphics[width=1\textwidth]{figures/cylindrical_coordinates.png}
-			\caption{柱坐标系}\label{fig:cylindrical_coordinates}
+			\input{tikz/Cylindrical_Coordinates.tex}
+			\caption{柱坐标系}\label{fig:Cylindrical_Coordinates}
 		\end{marginfigure}
-		柱坐标系如图\ref{fig:cylindrical_coordinates}所示.通常，我们用$(r,\theta,z)$来表述柱坐标系中的点，其中线参数$r\in[0,+\infty)$，$z\in \mathbb{R}$，角参数$\theta\in[0,2\pi)$，这些参数构成的坐标线彼此正交.将一个由柱坐标参数描述的点变换到由直角坐标参数描述的点总是容易的，我们有它的坐标变换映射
+		柱坐标系如图\ref{fig:Cylindrical_Coordinates}所示.通常，我们用$(r,\theta,z)$来表述柱坐标系中的点，其中线参数$r\in[0,+\infty)$，$z\in \mathbb{R}$，角参数$\theta\in[0,2\pi)$，这些参数构成的坐标线彼此正交.将一个由柱坐标参数描述的点变换到由直角坐标参数描述的点总是容易的，我们有它的坐标变换映射
 		\begin{equation}\label{eq:rthetaz to xyz 1}
 			(r,\theta,z)\mapsto(x,y,z),
 		\end{equation}
@@ -76,10 +76,10 @@
 			
 		\begin{marginfigure}
 			\centering
-			\includegraphics[width=1\textwidth]{figures/spherical_coordinates.png}
-			\caption{球坐标系}\label{fig:spherical_coordinates}
+			\input{tikz/Spherical_Coordinates.tex}
+			\caption{球坐标系}\label{fig:Spherical_Coordinates}
 		\end{marginfigure}
-		球坐标系是除了直角坐标系以外最常用的坐标系，如图\ref{fig:spherical_coordinates}所示.我们用$(r,\theta,\varphi)$来描述球坐标系中的点，其中线参数$r\in[0,+\infty)$，角参数$\theta\in[0,\pi)$，$\varphi\in[0,2\pi)$，两个角参数通常隐含着系统的球对称性以及各向同性.与柱坐标系相同，球坐标系到直角坐标系也有坐标变换映射
+		球坐标系是除了直角坐标系以外最常用的坐标系，如图\ref{fig:Spherical_Coordinates}所示.我们用$(r,\theta,\varphi)$来描述球坐标系中的点，其中线参数$r\in[0,+\infty)$，角参数$\theta\in[0,\pi)$，$\varphi\in[0,2\pi)$，两个角参数通常隐含着系统的球对称性以及各向同性.与柱坐标系相同，球坐标系到直角坐标系也有坐标变换映射
 		\begin{equation}\label{eq:rthetaphi to xyz 1}
 			(r,\theta,\varphi)\mapsto(x,y,z),
 		\end{equation}
@@ -104,7 +104,7 @@
 			\end{split}
 		\end{equation}
 
-		我还想再讲一讲超球坐标系，它是球坐标系进一步抽象的结果.$n$维的超球坐标系由$1$个线参数$x'^1\in[0,+\infty)$和$n-1$个角参数$x'^2,\cdots,x'^{n-2}\in[0,\pi)$，$x'^{n-1}\in[0,2\pi)$构成.超球坐标系到直角坐标系的坐标变换由如下映射给出
+		超球坐标系是球坐标系进一步抽象的结果.$n$维的超球坐标系由$1$个线参数$x'^1\in[0,+\infty)$和$n-1$个角参数$x'^2,\cdots,x'^{n-2}\in[0,\pi)$，$x'^{n-1}\in[0,2\pi)$构成.超球坐标系到直角坐标系的坐标变换由如下映射给出
 		\begin{equation}\label{eq:rthetaphi to xyz 3}
 			\phi:R^n\rightarrow R^n;(x'^1,\cdots,x'^n)\mapsto(x^1,\cdots,x^n),
 		\end{equation}
@@ -120,5 +120,38 @@
 			\end{split}
 		\end{equation}
 		如果我们令$n=3$，并进行参数变换$x^1=z$，$x^2=x$，$x^3=y$，以及$x'^1=r$，$x'^2=\theta$，$x'^3=\varphi$，则(\ref{eq:rthetaphi to xyz 4})就回到了(\ref{eq:rthetaphi to xyz 2})的情况.
+		\begin{remark}
+			我们以三维的球坐标变换为例讲述一下Lame系数.首先我们引入Jacobi矩阵，定义：
+			\begin{equation}
+				J=\begin{pmatrix}
+					\frac{\partial x}{\partial r}&\frac{\partial x}{\partial \theta}&\frac{\partial x}{\partial \varphi}\\
+					\frac{\partial y}{\partial r}&\frac{\partial y}{\partial \theta}&\frac{\partial y}{\partial \varphi}\\
+					\frac{\partial z}{\partial r}&\frac{\partial z}{\partial \theta}&\frac{\partial z}{\partial \varphi}
+				\end{pmatrix}
+				=\begin{pmatrix}
+					\sin\theta \cos\varphi&r\cos\theta\cos\varphi&-r\sin\theta\sin\varphi\\
+					\sin\theta \sin\varphi&r\cos\theta\sin\varphi&r\sin\theta\cos\varphi\\
+					\cos\theta&-r\sin\theta&0
+				\end{pmatrix},
+			\end{equation}
+			容易发现上式可做如下分解：
+			\begin{equation}
+				J=\begin{pmatrix}
+						\sin\theta\cos\varphi&\cos\theta\cos\varphi&-\sin\varphi\\
+						\sin\theta\sin\varphi&\cos\theta\sin\varphi&\cos\varphi\\
+						\cos\theta&-\sin\theta&0
+					\end{pmatrix}
+					\begin{pmatrix}
+						\sin\theta\cos\varphi&\cos\theta\cos\varphi&-\sin\varphi\\
+						\sin\theta\sin\varphi&\cos\theta\sin\varphi&\cos\varphi\\
+						\cos\theta&-\sin\theta&0
+					\end{pmatrix}
+					\begin{pmatrix}
+						1&0&0\\
+						0&r&0\\
+						0&0&r\sin\theta
+					\end{pmatrix},
+			\end{equation}
 
+		\end{remark}
 		我们这就论述了三种常见的坐标系.这些坐标系都有一个特点，即坐标线相互垂直.通常我们也将这样的坐标系称为正交曲线坐标系.当然，还有其他的正交曲线坐标系，例如圆环坐标系、椭球坐标系，等等，我们不再一一列举.但你可能会问：“有没有坐标线相互不正交的曲线坐标系？”那么我的回答是：“当然有.”实际上，坐标线相互不正交的坐标系才是一般情况.为了描述一般情况下的坐标系，我们将坐标变换函数组统一的记成$x^\mu(x'^\nu)$的形式，其中$\mu$指标表示“取坐标变换函数组中的第$\mu$个函数$x^\mu$”，$\nu$指标表示“取定函数$x^\mu$后，取函数的第$\nu$个参数”.这样的表述方法称为\textbf{抽象指标}记号，抽象指标在取定数值后成为\textbf{具体指标}.后面我们会看到，这样的表述方法是非常方便的.
