@@ -1,8 +1,7 @@
-\documentclass[10pt]{article}
+\documentclass[a4paper,10pt]{article}
 %\pdfoutput=1  					%xelatex编译注释掉
 \usepackage{NotesTeX}
-\usepackage[UTF8]{ctex}  		%pdfTex中文环境
-%\usepackage{CTEX}  			%xelatex编译中文环境
+\usepackage[UTF8]{ctex}
 %======================水印环境======================
 \usepackage{draftwatermark}		%水印，参数设置：仅在首页出现 [firstpage] ；仅在尾页出现 [lastpage]
 \SetWatermarkText{DRAFT}		%水印自定义文字
@@ -21,11 +20,16 @@
 \usepackage{tikz,tikz-3dplot}
 %\usepackage{showframe}			%显示框架
 %======================其他环境======================
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
 
-\title{\begin{center}{\Huge \textit{家用理论物理教程}}\\{{\itshape 从入门到转行}}\end{center}}
-	\author{Shunz Dai\footnote{\textit{Last update: }\today}\footnote{\href{https://ShunzDai.now.sh/}{\textit{My personal blog}}}}
+\title{\begin{center}{
+	\Huge \textit{家用理论物理教程}}\\
+	{{\itshape Courses of Theoretical Physics}}
+\end{center}}
+\author{Shunz Dai\footnote{\href{https://ShunzDai.now.sh/}{\textit{My personal blog}}}}
+\date{\today}
 
-\affiliation{Physics and Space Science College,China West Normal University\\}
+\affiliation{Physics and Space Science College, China West Normal University}
 
 
 \emailAdd{196883@outlook.com}
@@ -34,43 +38,37 @@
 %\backgroundsetup{scale=1, angle=0, opacity = 0.1,contents = {\includegraphics[width=\paperwidth, height=\paperwidth,keepaspectratio]{figures/background.png}}}
 
 \begin{document}
-
 	\maketitle
+	%将LaTeX版芯按页面高度均匀填满
 	\flushbottom
 	\newpage
 	\pagestyle{fancynotes}
-	\input{chapters/Introduction.tex}
-		\newpage
+	%\input{chapters/Introduction.tex}
+	%\newpage
 	\input{chapters/Differential-Geometry.tex}
-		\input{chapters/Differential-Geometry/Coordinates.tex}
-		\input{chapters/Differential-Geometry/Linear-Space.tex}
-		\input{chapters/Differential-Geometry/Field.tex}
-		\input{chapters/Differential-Geometry/Manifold.tex}
-		\input{chapters/Differential-Geometry/Connection.tex}
-		\newpage
-	\input{chapters/Analytical-Mechanics.tex}
-		\input{chapters/Analytical-Mechanics/Lagrange.tex}
-		\input{chapters/Analytical-Mechanics/Hamilton.tex}
-		\newpage
-	\input{chapters/GR.tex}
-		\input{chapters/GR/Field-Equation.tex}
-		\input{chapters/GR/Exact-Solutions.tex}
-		\newpage
-	\input{chapters/QFT.tex}
-		\input{chapters/QFT/Quantum-Mechanics.tex}
-		\newpage
-	\input{chapters/Appendix.tex}
-		\input{chapters/Appendix/Dimensional.tex}
-		\newpage
-		\input{chapters/Appendix/N-sphere.tex}
-		\newpage
+		
 	
+	%	\newpage
+	%\input{chapters/Analytical-Mechanics.tex}
+		%\input{chapters/Analytical-Mechanics/Lagrange.tex}
+	%	\input{chapters/Analytical-Mechanics/Hamilton.tex}
+	%	\newpage
+	%\input{chapters/GR.tex}
+	%	\input{chapters/GR/Field-Equation.tex}
+	%	\input{chapters/GR/Exact-Solutions.tex}
+	%	\newpage
+	%\input{chapters/QFT.tex}
+	%	\input{chapters/QFT/Quantum-Mechanics.tex}
+	%	\newpage
+	%\input{chapters/Appendix.tex}
+	%	\input{chapters/Appendix/Dimensional.tex}
+	%	\newpage
+	%	\input{chapters/Appendix/N-sphere.tex}
+	%	\newpage
 \end{document}
-
-
 %\begin{equation}  公式居中编号
 %	\begin{split}
-		
+	
 %	\end{split}
 %\end{equation}
 
