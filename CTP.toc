@@ -1,2 +1,0 @@
-\contentsline {part}{I\hspace {1em}微分几何}{1}{part.1}%
-\contentsline {section}{\numberline {1}局部坐标系}{1}{section.1}%
