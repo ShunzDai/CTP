@@ -1,5 +1,5 @@
 \section{局部坐标系}\label{sec:Coordinates}
-微分几何的研究对象是一个称为\textbf{流形}(Manifold)的集合，其上拥有线性结构与自然的拓扑结构.为了引出流形，我们先回顾一下线性空间、度量空间以及拓扑空间的公理化构造，然后逐步往集合上添加这些结构.
+微分几何的研究对象是一个称为\textbf{流形}(Manifold)\sidenote{天地有正气，杂然赋流形.下则为河岳，上则为日星.於人曰浩然，沛乎塞苍冥.\\\rightline{文天祥《正气歌》，江泽涵译}}的集合，其上拥有线性结构与自然的拓扑结构.为了引出流形，我们先回顾一下线性空间、度量空间以及拓扑空间的公理化构造，然后逐步往集合上添加这些结构.
 	\begin{definition}
 		域$F$上的线性空间$V$是这样一个集合，对任意$\alpha,\beta,\gamma\in V$；$a,b\in F$有
 
@@ -21,7 +21,7 @@
 	\end{remark}
 	$\mathbb{R}^n$除了上述的线性构造，还具有自然的度量结构.
 	\begin{definition}
-		$S$是一个集合，若存在一个映射$d:S\times S\rightarrow \mathbb{R}$，使得对于任意$x,y\in S$都满足：
+		$S$是一个集合，若存在一个映射$d:S\times S\rightarrow \mathbb{R}$，使得对于任意$x,y\in S$都满足
 
 		1)（正定性）$d(x,y)\geqslant 0$，且$d(x,y)=0$当且仅当$x=y$时成立；\\
 		2)（对称性）$d(x,y)=d(y,x)$；\\
@@ -41,7 +41,7 @@
 	\end{remark}
 	可以发现，$\mathbb{R}^n$还拥有自然的拓扑结构.
 	\begin{definition}
-		设$S$是一个集合，$O$是一些$S$的子集构成的集合.若$O$满足：
+		设$S$是一个集合，$O$是一些$S$的子集构成的集合.若$O$满足
 
 		1)$\varnothing\in O$且$S\in O$；\\
 		2)$O$中任意多个元素的并集仍是$O$的元素；\\
@@ -57,20 +57,154 @@
 	\end{remark}
 	拓扑空间上还可以加入额外的Hausdorff性质，这种性质强调了拓扑空间是无限可分的.
 	\begin{definition}
-		设$(S,O)$是一个拓扑空间，若对于任意两点$x,y\in S$，都存在邻域$O(x,a),O(y,b)\in O$，使得$O(x,a)\cap O(y,b)=\varnothing$，则称这个拓扑空间是Hausdorff空间.
+		设$(S,O)$是一个拓扑空间，若对于任意两点$x,y\in S$，都存在邻域$O(x,a),O(y,b)\in O$，使得$O(x,a)\cap O(y,b)\neq \varnothing$，则称这个拓扑空间是Hausdorff空间.
 	\end{definition}
 	然后便可以给出流形的定义了.
 	\begin{definition}
 		设$(M,O)$是一个Hausdorff空间.若对于任意一点$x\in M$，都存在邻域$O(x,r)\in O$同胚于$\mathbb{R}^n$的一个开集，则称$M$是一个$n$维\textbf{拓扑流形}.
 	\end{definition}
 	\begin{remark}
-		“同胚”指的是一个映射$\phi_{O(x,r)}:O(x,r)\rightarrow U\subset \mathbb{R}^n$，形象的说，就是将弯曲空间的局部与欧氏空间等同起来，建立一个一一对应的映射关系.我们将$(O(x,r),\phi_{O(x,r)})$称为流形$M$的一个\textbf{坐标卡}.同胚是一种在拓扑上很强的映射关系，以至于我们可以直接将映射$\phi_{O(x,r)}$的定义域和值域视为等同，直接将任意一点（这是流形$M$的元素）的坐标定义成它在同胚映射下的像（这是欧氏空间$\mathbb{R}^n$的元素）：
+		“同胚”指的是一个映射
 		\begin{equation}
 			\begin{split}
-				x^\mu\equiv \phi_{O(x,r)}(x),
+				\varphi_{O_i}:O_i\subset O\rightarrow U\subset \mathbb{R}^n,u\in O_i\mapsto x^\mu\in U,
 			\end{split}
 		\end{equation}
-		我们将$(O(x,r),x^\mu)$称为一个\textbf{局部坐标系}.
+		形象的说，就是将弯曲空间的局部与欧氏空间等同起来，建立一个一一对应的映射关系.我们将$(O_i,\varphi_{O_i})$称为流形$M$的一个\textbf{坐标卡}(Chart).同胚是一种在拓扑上很强的映射关系，以至于我们可以直接将映射$\varphi_{O_i}$的定义域和值域视为等同，直接将任意一点$u$（这是流形$M$的元素）的坐标定义成它在同胚映射$\varphi_{O_i}$下的像（这是欧氏空间$\mathbb{R}^n$的元素）：
+		\begin{equation}
+			\begin{split}
+				x\equiv \varphi_{O_i}(u),
+			\end{split}
+		\end{equation}
+		我们将$(O_i,x^\mu)$称为一个\textbf{局部坐标系}.
 	\end{remark}
-	有了流形局部与欧氏空间的同胚关系，我们便可以在流形上逐点定义同胚映射，用可数个局部坐标系覆盖整个流形.由于流形上的每个邻域$O(x,r)$都是开集，为了让这些开集能将流形覆盖，则相邻开集的交集必不为空集.例如，假设$O(x^\mu,a)$和$O({x'}^\mu,b)$是流形上的两个
+	有了流形局部与欧氏空间的同胚关系，我们便可以在流形上逐点定义同胚映射，用可数个局部坐标系覆盖整个流形.由于流形上的每个邻域$O(x,r)$都是开集，为了让这些开集能将流形覆盖，则相邻开集的交集必不为空集（这里就用到了流形的Hausdorff性质），现在我们来看看这个交集上会发生什么.
+	
+	假设$(O_i,x)$和$(O_j,x')$是流形上的两个局部坐标系，且$O_i\cap O_j\neq \varnothing$.由于同胚映射是一一的，这意味着它还是可逆的，于是在$O_i$和$O_j$的交叠区域$O_i\cap O_j$（这也是一个开集）中可定义一个复合的同胚映射$\varphi_{O_j}\circ \varphi^{-1}_{O_i}$，其中$\varphi^{-1}_{O_i}$是$\varphi_{O_i}$的逆，因此它是从$\mathbb{R}^n$的开子集到$O_i\cap O_j$的映射，而$\varphi_{O_j}$又是从$O_i\cap O_j$到$\mathbb{R}^n$的开子集的映射，所以复合映射$\varphi_{O_j}\circ \varphi^{-1}_{O_i}$是从$\mathbb{R}^n$的一个开集到另一个开集的映射：
+	\begin{equation}\label{eq:Coordinate_Transformation1}
+		\begin{split}
+			\varphi_{O_j}\circ \varphi^{-1}_{O_i}:U_i\subset\mathbb{R}^n\rightarrow U_j\subset\mathbb{R}^n,(x^1,\cdots,x^n)\mapsto (x'^1,\cdots,x'^n).
+		\end{split}
+	\end{equation}
+	注意到(\ref{eq:Coordinate_Transformation1})相当于“输入$x^\mu$，输出$x'^1$；$\cdots$；输入$x^\mu$，输出$x'^n$”，于是上述复合映射实质上是$n$个函数构成的函数组：
+	\begin{equation}\label{eq:Coordinate_Transformation2}
+		\begin{split}
+			x'^\mu=x'^\mu(x^\nu),
+		\end{split}
+	\end{equation}
+	这个函数组就是我们常说的坐标变换函数组.同理，我们可以导出复合映射$\varphi_{O_i}\circ \varphi^{-1}_{O_j}$的坐标变换函数组：
+	\begin{equation}\label{eq:Coordinate_Transformation3}
+		\begin{split}
+			\varphi_{O_i}\circ \varphi^{-1}_{O_j}:U_j\subset\mathbb{R}^n\rightarrow U_i&\subset\mathbb{R}^n,(x'^1,\cdots,x'^n)\mapsto (x^1,\cdots,x^n);
+		\end{split}
+	\end{equation}
+	\begin{equation}\label{eq:Coordinate_Transformation4}
+		\begin{split}
+			x^\mu&=x^\mu(x'^\nu).
+		\end{split}
+	\end{equation}
+	上述两个同胚映射是互逆的，这是因为$\varphi_{O_j}\circ \varphi^{-1}_{O_i}\circ \varphi_{O_i}\circ \varphi^{-1}_{O_j}=id$.如果坐标变换$x'^\mu=x'^\mu(x^\nu)$和$x^\mu=x^\mu(x'^\nu)$有直到$r\in\mathbb{Z}^+$阶连续的偏导数，则称这两个坐标系是$C^r$相容的.如果坐标变换有任意阶连续的偏导数，则称这两个坐标系是$C^\infty$相容的.
+	\begin{remark}
+		需要注意的是，相容性条件对$O_i\cap O_j=\varnothing$或$O_i\cap O_j\neq \varnothing$均成立，这意味着(\ref{eq:Coordinate_Transformation2})和(\ref{eq:Coordinate_Transformation4})的定义域分别是$U_i$和$U_j$，值域分别是$U_j$和$U_i$，而不是$U_i$和$U_j$中互相同胚的那部分开子集.事实上(\ref{eq:Coordinate_Transformation1})和(\ref{eq:Coordinate_Transformation3})也展示了这一点.
+	\end{remark}
+	
+	下面我们给出\textbf{坐标卡册}(Atlas)的定义.
+	\begin{definition}
+		设$M$是一个$n$维流形，$\mathcal{A}=\{(O_i,\varphi_{O_i})\}$是数个坐标卡的集合.若$\mathcal{A}$满足
+
+		1)$\{O_i\}$构成$M$的开覆盖，也即$\bigcup\limits_{i=1}^kO_i=M,k\in\mathbb{Z}^+,k<\infty$；\\
+		2)任意$(O_i,\varphi_{O_i}),(O_j,\varphi_{O_j})\in\mathcal{A}$都是$C^r$相容的；\\
+		3)$\mathcal{A}$是极大的，
+
+		则称$\mathcal{A}$是$M$的一个$C^r$微分结构（同一拓扑流形可以有不同的微分结构）.如果在$M$上给定了一个$C^r$微分结构，则称$M$是一个\textbf{$C^r$微分流形}.
+	\end{definition}
+
+	\subsection{直角坐标系}
+	\begin{marginfigure}
+		\centering
+		\input{tikz/Rectangular_Coordinates.tex}
+		\caption{直角坐标系}\label{fig:Rectangular_Coordinates}
+	\end{marginfigure}
+	最典型的例子就是正交直角坐标系，或者说是Cartesian坐标系，如图\ref{fig:Rectangular_Coordinates}所示.在这种坐标系中，坐标线是直线，且彼此正交.通常，我们用$(x,y,z)$来表述直角坐标系中的点.
+	\subsection{柱坐标系}
+	\begin{marginfigure}
+		\centering
+		\input{tikz/Cylindrical_Coordinates.tex}
+		\caption{柱坐标系}\label{fig:Cylindrical_Coordinates}
+	\end{marginfigure}
+	柱坐标系如图\ref{fig:Cylindrical_Coordinates}所示.通常，我们用$(r,\theta,z)$来表述柱坐标系中的点，其中线参数$r\in[0,+\infty)$，$z\in \mathbb{R}$，角参数$\theta\in[0,2\pi)$，这些参数构成的坐标线彼此正交.将一个由柱坐标参数描述的点变换到由直角坐标参数描述的点总是容易的，我们有它的坐标变换映射
+	\begin{equation}\label{eq:rthetaz to xyz 1}
+		(r,\theta,z)\mapsto(x,y,z),
+	\end{equation}
+	用坐标变换函数组表示就是
+	\begin{equation}\label{eq:rthetaz to xyz 2}
+		\begin{split}
+			x(r,\theta,z)&=r\cos\theta;\\
+			y(r,\theta,z)&=r\sin\theta;\\
+			z(r,\theta,z)&=z.
+		\end{split}
+	\end{equation}
+	我们注意到\ref{eq:rthetaz to xyz 2}是光滑的，通过计算可知其Jacobi矩阵的行列式不为零，这意味着\ref{eq:rthetaz to xyz 2}还是可逆的.于是我们可以得到\ref{eq:rthetaz to xyz 1}的逆映射
+	\begin{equation}\label{eq:xyz to rthetaz 1}
+		(x,y,z)\mapsto(r,\theta,z),
+	\end{equation}
+	用坐标变换函数组表示就是
+	\begin{equation}\label{eq:xyz to rthetaz 2}
+		\begin{split}
+			r(x,y,z)&=\sqrt{x^2+y^2};\\
+			\theta(x,y,z)&=\arccos\left(\frac{x}{\sqrt{x^2+y^2}}\right);\\
+			z(x,y,z)&=z.
+		\end{split}
+	\end{equation}
+		
+\subsection{球坐标系}
+		
+	\begin{marginfigure}
+		\centering
+		\input{tikz/Spherical_Coordinates.tex}
+		\caption{球坐标系}\label{fig:Spherical_Coordinates}
+	\end{marginfigure}
+	球坐标系是除了直角坐标系以外最常用的坐标系，如图\ref{fig:Spherical_Coordinates}所示.我们用$(r,\theta,\varphi)$来描述球坐标系中的点，其中线参数$r\in[0,+\infty)$，角参数$\theta\in[0,\pi)$，$\varphi\in[0,2\pi)$，两个角参数通常隐含着系统的球对称性以及各向同性.与柱坐标系相同，球坐标系的Jacobi行列式也不为零，于是可以得到球坐标系到直角坐标系的坐标变换映射
+	\begin{equation}\label{eq:rthetaphi to xyz 1}
+		(r,\theta,\varphi)\mapsto(x,y,z),
+	\end{equation}
+	用坐标变换函数组表示就是
+	\begin{equation}\label{eq:rthetaphi to xyz 2}
+		\begin{split}
+			x(r,\theta,\varphi)&=r\sin\theta \cos\varphi;\\
+			y(r,\theta,\varphi)&=r\sin\theta \sin\varphi;\\
+			z(r,\theta,\varphi)&=r\cos\theta.
+		\end{split}
+	\end{equation}
+	同样的有直角坐标系到球坐标系的逆变换
+	\begin{equation}\label{eq:xyz to rthetaphi 1}
+		(r,\theta,\varphi)\mapsto(x,y,z),
+	\end{equation}
+	用坐标变换函数组表示就是
+	\begin{equation}\label{eq:xyz to rthetaphi 2}
+		\begin{split}
+			r(x,y,z)&=\sqrt{x^2+y^2+z^2};\\
+			\theta(x,y,z)&=\arccos\left(\frac{z}{\sqrt{x^2+y^2+z^2}}\right);\\
+			\varphi(x,y,z)&=\arctan(\frac{y}{x}).
+		\end{split}
+	\end{equation}
+
+	$n$维的超球坐标系由$1$个线参数$x'^1\in[0,+\infty)$和$n-1$个角参数$x'^2,\cdots,x'^{n-2}\in[0,\pi)$，$x'^{n-1}\in[0,2\pi)$构成.超球坐标系到直角坐标系的坐标变换由如下映射给出
+	\begin{equation}\label{eq:rthetaphi to xyz 3}
+		\phi:R^n\rightarrow R^n;(x'^1,\cdots,x'^n)\mapsto(x^1,\cdots,x^n),
+	\end{equation}
+	用坐标变换函数组表示就是
+	\begin{equation}\label{eq:rthetaphi to xyz 4}
+		\begin{split}
+			x^1(x'^1,\cdots,x'^n)&=x'^1\cos x'^2;\\
+			x^2(x'^1,\cdots,x'^n)&=x'^1\sin x'^2\cos x'^3;\\
+			x^3(x'^1,\cdots,x'^n)&=x'^1\sin x'^2\sin x'^3\cos x'^4;\\
+			&\cdots\\
+			x^{n-1}(x'^1,\cdots,x'^n)&=x'^1\sin x'^2\cdots \sin x'^{n-2}\cos x'^{n-1};\\
+			x^{n}(x'^1,\cdots,x'^n)&=x'^1\sin x'^2\cdots \sin x'^{n-2}\sin x'^{n-1}.
+		\end{split}
+	\end{equation}
+	如果我们令$n=3$，并进行参数变换$x^1=z$，$x^2=x$，$x^3=y$，以及$x'^1=r$，$x'^2=\theta$，$x'^3=\varphi$，则(\ref{eq:rthetaphi to xyz 4})就回到了(\ref{eq:rthetaphi to xyz 2})的情况.
+
+	
 	

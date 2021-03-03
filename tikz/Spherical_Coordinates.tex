@@ -24,9 +24,9 @@
 %--------------------
 
 %draw the main coordinate system axes
-\draw[thick,->] (0,0,0) -- (0.75,0,0) node[anchor=north east]{$x$};
-\draw[thick,->] (0,0,0) -- (0,0.75,0) node[anchor=north west]{$y$};
-\draw[thick,->] (0,0,0) -- (0,0,0.75) node[anchor=south]{$z$};
+\draw[thick,->] (0,0,0) -- (0.8,0,0) node[anchor=north east]{$x$};
+\draw[thick,->] (0,0,0) -- (0,0.8,0) node[anchor=north west]{$y$};
+\draw[thick,->] (0,0,0) -- (0,0,0.8) node[anchor=south]{$z$};
 
 %draw a vector from origin to point (P) 
 \draw[-stealth,color=black] (O) -- (P) node[anchor=east]{$r$};
@@ -46,7 +46,7 @@
 \tdplotsetthetaplanecoords{\phivec}
 
 %draw theta arc and label, using rotated coordinate system
-\tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.5}{0}{\thetavec}{anchor=south west}{$\theta$}
+\tdplotdrawarc[tdplot_rotated_coords]{(0,0,0)}{0.4}{0}{\thetavec}{anchor=south west}{$\theta$}
 
 %draw some dashed arcs, demonstrating direct arc drawing
 \draw[dashed,tdplot_rotated_coords] (\rvec,0,0) arc (0:90:\rvec);
@@ -62,9 +62,9 @@
 \tdplotsetrotatedcoordsorigin{(P)}
 
 %use the tdplot_rotated_coords style to work in the rotated, translated coordinate frame
-\draw[thick,tdplot_rotated_coords,->] (0,0,0) -- (0.4,0,0) node[anchor=north west]{$d\theta$};
-\draw[thick,tdplot_rotated_coords,->] (0,0,0) -- (0,0.4,0) node[anchor=west]{$d\varphi$};
-\draw[thick,tdplot_rotated_coords,->] (0,0,0) -- (0,0,0.4) node[anchor=south]{$dr$};
+\draw[thick,tdplot_rotated_coords,->] (0,0,0) -- (0.2,0,0) node[anchor=north west]{$d\theta$};
+\draw[thick,tdplot_rotated_coords,->] (0,0,0) -- (0,0.2,0) node[anchor=west]{$d\varphi$};
+\draw[thick,tdplot_rotated_coords,->] (0,0,0) -- (0,0,0.2) node[anchor=south]{$dr$};
 
 \tdplotsetrotatedthetaplanecoords{45}
 
